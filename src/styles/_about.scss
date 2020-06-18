@@ -1,0 +1,36 @@
+.aboutUs {
+    width: 100%;
+    background-color: #eeefef;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  
+    &__content {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 35%;
+      margin-right: 50px;
+      &--title{
+        font-size: 40px;
+      }
+      &--decoration{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      &--information{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      &--signature{
+        align-self: flex-end;
+      }
+    }
+    &__image{
+      flex-basis: 50%;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+  }

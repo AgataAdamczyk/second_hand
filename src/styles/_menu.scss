@@ -1,0 +1,40 @@
+.whoWeHelp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    &__select{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--title{
+        font-size: 40px;
+      }
+      &--decoration{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+    &__navigation{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 45%;
+  
+      &--button{
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px 10px 15px;
+      }
+      &--btnsel{
+        border: 1px solid black;
+      }
+  
+    }
+  
+  }
