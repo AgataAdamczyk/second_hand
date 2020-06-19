@@ -1,0 +1,48 @@
+.footer__content {
+    margin-top: 200px;
+
+    .col-12 {
+        display: flex;
+        justify-content: flex-end;
+        
+        h3 {
+            font-family: $main-font;
+            font-size: 18px;
+            color: $darkerMain;
+            font-weight: 400;
+        }
+    }
+    .col-7 {
+        display: flex;
+        justify-content: flex-end;
+        .col-1 {
+            .facebook {
+                display: block;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $darkerMain;
+                    left: -15px;
+                    bottom: -6px;
+                }
+            }
+            .instagram {
+                display: block;
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $darkerMain;
+                    left: -9px;
+                    bottom: -4px;
+                }
+            }
+        }
+    }
+}

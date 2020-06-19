@@ -1,40 +1,44 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import decoration from "../../images/decoration.png";
-import facebook from "../../images/1447355328_06-facebook.png";
-import instagram from "../../images/1447355379_Instagram.png";
+import ContactForm from './ContactForm';
 
-class Contact extends Component {
-    state = {};
-
-    render() {
-        return (
-            <section name="contact" className="contact">
-                <div className="contact__content">
-                    <p className="contact__content--title">Skontaktuj się z nami</p>
-                    <img src={decoration} alt="decoration" className="contact__content--decoration decoration"/>
-                    <form action="#" target="_self" className="form" method="get">
-                        <p className="form__title">Formularz kontaktowy</p>
-                        <div className="form__inputs">
-                            <label><input className="form__inputs--name" placeholder="Imię" type="text"/></label>
-                            <label><input className="form__inputs--email" placeholder="E-mail" type="email"/></label>
-
+const Contact = () => {
+    return (
+        <div className="grid__container contact__content" name="contact">
+            <div className="row">
+                <div className="col-18 contact__header">
+                        <div className="col-5">
+                            <h2>Skontaktuj sie z nami</h2>
                         </div>
-                        <label><input className="form__message" placeholder="Wiadomość" type="text"/></label>
-                        <input className="form__sendButton" name="submitbutton" value="Wyślij" type="submit"/>
-                    </form>
-                </div>
-                <div className="footer">
-                    <div className="footer__empty"/>
-                    <p className="footer__copyright">Copyright 2015 &copy; by Anna Dadej</p>
-                    <div className="footer__social">
-                        <img className="footer__social--facebook" src={facebook} alt="facebook"/>
-                        <img className="footer__social--instagram" src={instagram} alt="instagram"/>
+                    </div>
+                <div/>
+                <div className="row">
+                    <div className="col-18 footer-decoration">
+                        <div className="col-5">
+                            <img src={require('../../images/decoration-1.svg')} alt="decoration"/>
+                        </div>
                     </div>
                 </div>
-            </section>
-        )
-    }
+                < ContactForm />  
+            </div>
+            
+            <footer className="row">
+                <div className="col-21 footer__content">
+                    <div className="col-12">
+                        <h3>Copyright 2015 © by Anna Dadej</h3>
+                    </div>
+                    <div className="col-7">
+                        <div className="col-1">
+                            <a className='facebook' href="https://www.facebook.com/"><img src={require('../../images/fb.svg')} alt="facebook"/></a>
+                        </div>
+                        <div className="col-1">
+                            <a className='instagram' href="https://www.instagram.com/?hl=pl"><img src={require('../../images/ig.svg')} alt="instagram"/></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    )
 }
 
 export default Contact;

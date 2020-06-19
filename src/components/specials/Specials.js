@@ -1,43 +1,52 @@
 import React from 'react';
 
-import decoration from "../../images/decoration.png";
-import first from "../../images/28.svg";
-import second from "../../images/016.svg";
-import third from "../../images/039.svg";
-import fourth from "../../images/58.svg";
+import SpecialsColumns from './ScpecialsColums';
+import SpecialsBtn from './SpecialsBtn';
 
 const Specials = () => {
     return (
-        <section name="fourSteps" className="fourSteps">
-            <p className="fourSteps__title">Wystarczą 4 proste kroki</p>
-            <img className="fourSteps__decoration decoration" src={decoration} alt="decoration"/>
-            <section className="fourSteps__information">
-                <div className="fourSteps__element">
-                    <img className="fourSteps__element--img" src={first} alt="img"/>
-                    <p className="fourSteps__element--elementTitle">Wybierz rzeczy</p>
-                    <div className="fourSteps__element--line"></div>
-                    <span className="fourSteps__element--description">ubrania,zabawki, sprzęt i inne</span>
+        <section name='Specials' className="grid__container" id="specials">
+            <div className="row">
+                <div className="col-21 specials__header">
+                    <h2>Wystarczą 4 proste kroki</h2>                        
                 </div>
-                <div className="fourSteps__element">
-                    <img className="fourSteps__element--img" src={second} alt="img"/>
-                    <p className="fourSteps__element--elementTitle">Spakuj je</p>
-                    <div className="fourSteps__element--line"></div>
-                    <span className="fourSteps__element--description">skorzystaj z worków na śmieci</span>
+            </div>
+            <div className="row">
+                <div className="col-21 specials__decoration">
+                    <img src={require('../../images/decoration-1.svg')} alt="decoration"/>
                 </div>
-                <div className="fourSteps__element">
-                    <img className="fourSteps__element--img" src={third} alt="img"/>
-                    <p className="fourSteps__element--elementTitle">Zdecyduj komu chcesz pomóc</p>
-                    <div className="fourSteps__element--line"></div>
-                    <span className="fourSteps__element--description">wybierz zaufane miejsce</span>
+            </div>
+            <div className="row">
+                <div className="col-21 specials__content">
+                    <div className="col-13 specials__columns">
+                        < SpecialsColumns 
+                            image={require("../../images/28.svg")} 
+                            specialsText="Wybierz rzeczy"
+                            specialsItems="ubrania, zabawki, sprzęt i inne"
+                        />
+                        < SpecialsColumns
+                            image={require("../../images/016.svg")} 
+                            specialsText="Spakuj je"
+                            specialsItems="skorzystaj z worków na śmieci"
+                        />
+                        < SpecialsColumns
+                            image={require("../../images/039.svg")} 
+                            specialsText="Zdecyduj komu chesz pomóc" 
+                            specialsItems="wybierz zaufane miejsce"
+                        />
+                        < SpecialsColumns
+                            image={require("../../images/58.svg")} 
+                            specialsText="Zamów kuriera"
+                            specialsItems="kurier przyjedzie w dogodnym terminie"
+                        />
+                    </div>
                 </div>
-                <div className="fourSteps__element">
-                    <img className="fourSteps__element--img" src={fourth} alt="img"/>
-                    <p className="fourSteps__element--elementTitle">Zamów kuriera</p>
-                    <div className="fourSteps__element--line"></div>
-                    <span className="fourSteps__element--description">kurier przyjedzie w dogodnym terminie</span>
+            </div>
+            <div className="row">
+                <div className="col-21 specials__btn">
+                    < SpecialsBtn text="Załóż konto" />
                 </div>
-            </section>
-            <a href="#" className="fourSteps__button">Załóż konto</a>
+            </div>
         </section>
     )
 }
