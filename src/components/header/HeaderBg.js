@@ -1,13 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class HeaderBg extends Component {
-    render() {
-        return (
-            <div className='header__bg'>
-                <img src={require('../../images/header_start_img.jpg')} alt="header_bg"/>
-            </div>
-        )
-    }
+const HeaderBg = () => {
+    return (
+        <img src={require('../../images/header_start_img.jpg')} alt="header_bg"/>
+    )
 }
 
 export default HeaderBg;

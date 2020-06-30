@@ -20,12 +20,12 @@ class Navigation extends Component {
 
     render() {
         return (
-            <ul className='nav__list'>
-            <li><Link to='Header' className='nav__list--link' spy={true} smooth={true} duration={500}>Start</Link></li>
-            <li><Link to='Specials' className='nav__list--link' spy={true} smooth={true} duration={500}>O co chodzi?</Link></li>
-            <li><Link to='About' className='nav__list--link' spy={true} smooth={true} duration={500}>O nas</Link></li>
-            <li><Link to='Menu' className='nav__list--link' spy={true} smooth={true} duration={500}>Fundacje i organizacje</Link></li>
-            <li><Link to='Contact' className='nav__list--link' spy={true} smooth={true} duration={500}>Kontakt</Link></li>
+        <ul className='header__menu--menuList'>
+            <li><Link to='Header' id='menu-link' spy={true} smooth={true} duration={500}>Start</Link></li>
+            <li><Link to='Specials' id='menu-link' spy={true} smooth={true} duration={500}>O co chodzi?</Link></li>
+            <li><Link to='About' id='menu-link' spy={true} smooth={true} duration={500}>O nas</Link></li>
+            <li><Link to='Menu' id='menu-link' spy={true} smooth={true} duration={500}>Fundacje i organizacje</Link></li>
+            <li><Link to='Contact' id='menu-link' spy={true} smooth={true} duration={500}>Kontakt</Link></li>
         </ul>
         )
     }

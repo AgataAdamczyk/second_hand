@@ -1,38 +1,10 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-$mainWidth: 1900px;
-$numberOfColumns: 21;
-$singleCol: $mainWidth / $numberOfColumns;
-
-@mixin clearfix() {
-    &:after, &:before{
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-  .grid__container {
-    width: 100%;
-    max-width: $mainWidth;
-    margin: 0 auto;
-    border: 1px solid red;
-    
-    .row {
-      
-      @include clearfix();
-      @for $i from 1 through $numberOfColumns {
-        .col-#{$i} {
-          width: $singleCol * $i;
-          min-height: 1px;
-          float: left;
-          border: 1px solid blueviolet;
-          
-        }
-      }
-    }
+.grid__container {
+  display: grid;
+  max-width: 1900px;
 }
