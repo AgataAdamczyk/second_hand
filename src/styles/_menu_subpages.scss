@@ -1,0 +1,66 @@
+.menu__subpages {
+    display: grid;
+    grid-template-rows: 2;
+    justify-self: center;
+
+    h2 {
+        display: grid;
+        grid-template-columns: 600px;
+        justify-self: center;
+        margin: 30px;
+        text-align: center;
+        font-family: $main-font;
+        font-size: 20px;
+        color: $darkerMain;
+        font-weight: 400;
+    }
+
+    .menu__items {
+        display: grid;
+        grid-template-columns: repeat(2, 650px);
+        grid-gap: 200px;
+
+        &--listLeft,
+        &--listRight {
+            display: grid;
+            padding: 30px 0;
+
+            #row {
+                display: grid;
+                grid-template-rows: 50px 50px 20px;
+
+                h3 {
+                    display: grid;
+                    align-self: end;
+                    font-size: 26px;
+                    font-family: $menu-font;
+                    color: $darkerMain;
+                    font-weight: 300;
+                }
+        
+                h4 {
+                    display: grid; 
+                    align-self: start;
+                    font-size: 18px;
+                    font-style: italic;
+                    font-family: $menu-font;
+                    color: $darkerMain;
+                    font-weight: 300;
+                }
+        
+                #line {
+                    display: grid;
+                    align-self: start;
+                    width: 450px;
+                    height: 1px;
+                    background-color: $darkerMain;
+                }
+            }
+        }
+
+        &--listRight {
+            justify-content: end;
+            text-align: end;
+        }
+    }   
+}
