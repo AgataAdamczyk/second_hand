@@ -2,52 +2,32 @@ import React, { Component } from 'react';
 
 class ContactForm extends Component {
     state = {
-        username: 'Imię',
-        email: 'Email',
-        message: 'Wiadomość'
+        username: '',
+        email: '',
+        message: ''
     }
 
-    handleChange = (event) => {
+    handleChange = (e) => {
         this.setState({
-            [event.target.id]: event.target.value,
+            [e.target.id]: e.target.value,
         })    
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
+    handleSubmit = (e) => {
+        e.preventDefault();
         console.log(this.state)
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} id='form' name='Form'>
-                <div className="row">
-                    <div className="col-17 form-contact">
-                        <div className="col-4">
-                            <h2>FORMULARZ KONTAKTOWY</h2>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-19 form-data">
-                        <div className="col-3">
-                                <input type="text" value={this.state.username} id='username' onChange={this.handleChange}/>
-                        </div>
-                        <div className="col-3">
-                                <input type='email' value={this.state.email} id='email' onChange={this.handleChange}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-18 form-textarea">
-                        <textarea id="message" cols="53" rows="1" value={this.state.message} onChange={this.handleChange}></textarea>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-17 form-button">
-                        <input type="submit" value='Wyślij' className='form-submit'/>
-                    </div>
-                </div>
+            <form name='Form' onSubmit={this.handleSubmit} className='contact__form'>
+                <h3 className='contact__form--h3'>Formularz kontaktowy</h3>
+              
+                <input id='username' type='text' placeholder='Imię' value={this.state.username} onChange={this.handleChange}/>
+                <input id='email' type='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
+                <textarea id='message' rows='1' placeholder='Wiadomość' value={this.state.message} onChange={this.handleChange}></textarea>
+             
+                <input id='btn' type='submit' value='Wyślij'/>
             </form>
         )
     }

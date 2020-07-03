@@ -1,102 +1,109 @@
-.contact__content {
-  width:100%;
-  height: 90vh;
-  background-image: url(../../src/images/aa.png);
+.contact {
+  display: grid;
+  grid-template-columns: 1000px 900px;
+  grid-template-rows: 300px 360px 360px;
+  background-image: url(../../src/images/Footer_background_shadow.svg), url(../../src/images/footer_bg_img.jpg);
   background-size: cover;
-  margin-top:-1px;
-  margin-top: 30px;
+  background-repeat: no-repeat;
+  font-family: $main-font;
 
-  .contact__header {
-    margin-left:70px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top:160px;
+  &--h2 {
+    display: grid;
+    grid-column: 2/-1;
+    justify-self: center;
+    align-self: end;
+    font-size: 40px;
+    color: $darkerMain;
+    font-weight: 400;
 
-      .col-5 {
-        display: flex;
-        justify-content: center;
-        font-family: $main-font;
-
-        h2 {
-          font-size:34px;
-          color: $darkerMain;
-          font-weight: 400;
-        }
-      }
-  }
-
-  .footer-decoration {
-    margin-left:70px;
-    margin-top:20px;
-    display: flex;
-    justify-content: flex-end;
-
-    .col-5 {
-      display: flex;
-      justify-content: center;
+    img {
+      justify-self: center;
+      margin: 15px 0;
     }
   }
 
-  .form-contact {
-      margin-left:70px;
-      margin-top:70px;
-      display: flex;
-      justify-content: flex-end;
-      .col-4 {
-          h2 {
-              font-size:16px;
-              color: $darkerMain;
-              font-weight: 400;
-          }
-      }
+  .contact__form {
+    display: grid;
+    grid-column: 2/-1;
+    grid-template-columns: repeat(2, 250px);
+    grid-gap: 10px 55px;
+    justify-self: center;
+
+    &--h3 {
+      grid-column: 1/-1;
+      margin-top: 80px;
+      font-size: 18px;
+      color: $darkerMain;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    input, 
+    textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $darkerMain;
+      padding: 10px 20px;
+      margin-top: 20px;
+      align-self: end;
+      font-family: $main-font;
+      font-size: 18px;
+      outline: none;
+    }
+
+    ::placeholder {
+      color: $darkerMain;
+    }
+
+    #username {
+      grid-column: 1/2;
+    }
+
+    #email {
+      grid-column: 2/-1;
+    }
+
+    #message {
+      grid-column: 1/-1;
+    }
+
+    #btn {
+      grid-column: 1/-1;
+      justify-self: center;
+      margin-top: 50px;
+      padding: 15px;
+      border: 1px solid $darkerMain;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
 
-  .form-data {
-      margin-left:70px;
-      display: flex;
-      justify-content: flex-end;
-      margin-top:10px;
-      input {
-          margin-top: 5px;
-          background-color: transparent;
-          border: none;
-          border-bottom: 1px solid $darkerMain;
-          position: relative;
-          padding: 10px;
-          font-family: $main-font;
-          outline: none;
-          // width:200px;
-      }
+  .footer {
+    display: grid;
+    grid-column: 1/-1;
+    align-self: end;
+    padding-bottom: 30px;
 
+    .footer__media {
+      display: grid;
+      grid-template-columns: repeat(2, 50px);
+      grid-template-rows: 50px;
+      grid-gap: 15px;
+      margin-right: 180px;
+      justify-self: right;
       
-  }
-  .form-textarea {
-      margin-top:20px;
-      display: flex;
-      justify-content: flex-end;
-      margin-left:81px;
-      textarea  {
-          margin-top: 5px;
-          background-color: transparent;
-          border: none;
-          border-bottom: 1px solid $darkerMain;
-          position: relative;
-          padding: 10px;
-          font-family: $main-font;
-          outline: none;
-          // width:200px;
+      &--link {
+        border: 1px solid $darkerMain;
+        padding: 12px;
+        text-align: center;
       }
-  }
-  .form-button {
-      display: flex;
-      justify-content: flex-end;
-      .form-submit {
-          margin-top:20px;
-          width:60px;
-          height: 40px;
-          border: 1px solid $darkerMain;
-          background-color: transparent;
-          cursor: pointer;
-      }
+    }
+
+    &--h3 {
+      justify-self: center;
+      font-family: $menu-font;
+      font-size: 18px;
+      font-weight: 300;
+    }
   }
 }
