@@ -5,7 +5,7 @@ import {BrowserRouter,Switch, Route} from 'react-router-dom';
 import Home from './Home';
 
 // import LoggedPage from './LoggedPage'
-import SignIn from './SignIn';
+import SignIn from './singIn/SignIn';
 // import SignUp from './SignUp';
 
 
