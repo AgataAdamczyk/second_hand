@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const LogIn = () => {
+const LogInBtn = () => {
     return (
-        <NavLink to='/signin' className='link'>
+        <NavLink to='/logIn' className='link'>
             <span>Zaloguj</span>
         </NavLink>
     )
 }
 
 
-export default LogIn;
+export default LogInBtn;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Header from './header/Header';
 import ThreeColumns from './threeColumns/ThreeColumns';
@@ -8,19 +8,17 @@ import Menu from './menu/Menu';
 import Contact from './contact/Contact';
 
 
-class Home extends Component {
-  render() {
-    return (
-        <>
-            <Header/>
-            <ThreeColumns/>
-            <Specials/>
-            <About/>
-            <Menu/>
-            <Contact/>
-        </>
-    )
-  }
+const Home = () => {
+  return (
+    <>
+      < Header />
+      < ThreeColumns />
+      < Specials />
+      < About />
+      < Menu />
+      < Contact />
+    </>
+  )
 }
 
 export default Home;

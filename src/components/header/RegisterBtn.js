@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Register = () => {
+const RegisterBtn = () => {
     return (
-        <NavLink to='/signup' className='link'>
+        <NavLink to='/register' className='link'>
             <span>Załóż konto</span>
         </NavLink> 
     )
 }
 
 
-export default Register;
+export default RegisterBtn;

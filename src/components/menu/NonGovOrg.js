@@ -11,14 +11,14 @@ const NonGovMenu = () => {
         
                 <div className='menu__items'> 
                     <div className='menu__items--listLeft'>
-                        <Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.'/> 
-                        <Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.'/>
-                        <Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.'/>
+                        < Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.' /> 
+                        < Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.' />
+                        < Organization title='Organizacja "Lorem Ipsum"' description='Lorem ipsum dolor sit amet consectetur.' />
                     </div>
                     <div className='menu__items--listRight'>
-                        <Items items='Lorem ipsum dolor sit amet consectetur.'/>
-                        <Items items='Lorem ipsum dolor sit amet consectetur.'/>
-                        <Items items='Lorem ipsum dolor sit amet consectetur.'/>
+                        < Items items='Lorem ipsum dolor sit amet consectetur.' />
+                        < Items items='Lorem ipsum dolor sit amet consectetur.' />
+                        < Items items='Lorem ipsum dolor sit amet consectetur.' />
                     </div>
                 </div>
             </div>  

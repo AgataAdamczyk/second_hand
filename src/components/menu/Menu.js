@@ -13,7 +13,7 @@ const Menu = () => {
             <section name='Menu' className='grid__container'>
                 <div className='menu'>
                     <h2>Komu pomagamy?
-                        <img src={require('../../images/decoration-1.svg')} alt="decoration" id='menu-decor'/>
+                        <img src={require('../../images/decoration-1.svg')} alt='decoration' id='menu-decor'/>
                     </h2>
                 < MenuNavigation />
                     <Switch >

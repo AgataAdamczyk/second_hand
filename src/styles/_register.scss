@@ -1,4 +1,4 @@
-.signIn {
+.register {
     display: grid;
     grid-template-rows: 200px 700px;
     padding: 45px;
@@ -66,10 +66,10 @@
         }
     }
 
-    .signIn__form {
+    .register__form {
         display: grid;
         grid-template-columns: 600px;
-        grid-template-rows: 200px 95px 95px 95px 150px;
+        grid-template-rows: 200px 95px 95px 95px 95px 150px;
         justify-self: center;
 
         &--h3 {
@@ -88,6 +88,7 @@
             }
         }
 
+        input[type=text],
         input[type=email],
         input[type=password] {
             font-size: 18px;

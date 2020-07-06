@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-class SignInForm extends Component {
+class RegisterForm extends Component {
     state = {
+        name: '',
         email: '',
         password: '',
         confirmPassword: ''
@@ -21,19 +22,20 @@ class SignInForm extends Component {
     
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className='signIn__form'>
-                <h3 className='signIn__form--h3'>Zaloguj się
+            <form onSubmit={this.handleSubmit} className='register__form'>
+                <h3 className='register__form--h3'>Zarejestruj się
                     <img src={require('../../images/decoration-1.svg')} alt='decoration'/>
-                </h3>   
+                </h3> 
+                <input id='name' type='text' placeholder='Imię' value={this.state.name} onChange={this.handleChange}/>  
                 <input id='email' type='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
                 <input id='password' type='password' placeholder='Hasło' value={this.state.password} onChange={this.handleChange}/>
                 <input id='confirmPassword' type='password' placeholder='Powtórz hasło' value={this.state.confirmPassword} onChange={this.handleChange}/>
                            
-                <div className="signIn__form--btns">
-                    <Link id='register' to='/register/'>
+                <div className="register__form--btns">
+                    <Link id='register' to='/register'>
                         <input  type='submit' value='Załóż konto'/>
                     </Link>
-                    <Link id='logIn' to='/logged/'>
+                    <Link id='logIn' to='/logged'>
                         <input type='submit' value='Zaloguj się'/>
                     </Link>
                 </div>
@@ -42,4 +44,4 @@ class SignInForm extends Component {
     }
 }
 
-export default SignInForm;
+export default RegisterForm;

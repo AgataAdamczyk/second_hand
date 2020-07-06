@@ -11,8 +11,8 @@ const Header = () => {
             <header name='Header' className='header'>
                 < HeaderBg />
 
-                <nav className="header__nav">
-                    <div className="header__menu">
+                <nav className='header__nav'>
+                    <div className='header__menu'>
                         < LogBtns />
                         < Navigation />
                     </div>
@@ -23,8 +23,8 @@ const Header = () => {
                         </div>
                     </div>     
                     <div className='header__btns'>
-                        <HeaderBtns text='oddaj rzeczy'/>
-                        <HeaderBtns text='zorganizuj zbiórkę'/>
+                        < HeaderBtns text='oddaj rzeczy' />
+                        < HeaderBtns text='zorganizuj zbiórkę' />
                     </div>
                 </nav>
             </header> 

@@ -2,20 +2,20 @@ import React from 'react';
 
 import Navigation from '../header/Navigation';
 import LogBtns from '../header/LogBtns';
-import SignInForm from '../singIn/SignInForm';
+import RegisterForm from './RegisterForm';
 
-const SignIn = () => {
+const Register = () => {
     return (
-        <section name='SignIn' className='grid__container'>
-            <div className='signIn'>
+        <section name='Register' className='grid__container'>
+            <div className='register'>
                 <div className='header__menu'>
                     < LogBtns />
                     < Navigation />
                 </div>
-                < SignInForm />
+                < RegisterForm />
             </div>
         </section>
     )
 }
 
-export default SignIn;
+export default Register;
