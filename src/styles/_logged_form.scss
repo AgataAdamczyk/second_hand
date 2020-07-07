@@ -1,0 +1,87 @@
+.logged__form {
+    display: grid;
+    grid-template-rows: 160px 800px;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url(../../src/images/barrett-ward-720419-unsplash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &--notification {
+        display: grid;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        padding: 30px;
+        background-color: $notificationBg;
+
+        h3 {
+            font-family: $main-font;
+            font-size: 24px;
+            color: $darkerMain;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+
+    &--steps {
+        display: grid;
+        padding: 30px;
+        margin-left: 100px;
+
+        #step-counter {
+            color: $formCheckbox;
+
+        }
+
+        #first-step {
+            display: grid;
+            grid-template-columns: 25px auto;
+            grid-gap: 20px;
+            padding: 20px;
+            color: $formCheckbox;
+
+            input[type=checkbox] {
+                width: 25px;
+                height: 25px;
+                border: 1px solid $formCheckbox;
+
+            }
+
+            label {
+                font-size: 20px;
+
+            }
+        }
+
+        #btnNextPrev {
+            width: 120px;
+            height: 50px;
+            color: $formCheckbox;
+            border: 1px solid $formCheckbox;
+            font-size: 18px;
+            font-family: $main-font;
+            background-color: transparent;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    }
+
+    &--thanks {
+        display: grid;
+        grid-row: 1/-1;
+        align-self: center;
+        margin-left: 280px;
+
+        h2 {
+            font-family: $main-font;
+            font-size: 40px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        img {
+            justify-self: center;
+            margin: 20px 0;
+        }
+    }
+}

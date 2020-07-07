@@ -1,15 +1,14 @@
 .logged__header {
     display: grid;
+    background-image: url(../images/header_logged_img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-template-columns: 850px 900px 150px;
     grid-template-rows: 150px 400px 300px;
 
-    &--img {
-        max-width: 100%;
-        grid-column: 1/-1;
-    }
-
     .header__menu {
         display: grid;
+        grid-column: 2/3;
         justify-self: end;
 
         &--menuList {
@@ -68,7 +67,7 @@
         grid-column: 2/3;
         grid-template-columns: repeat(4, 100px);
         grid-gap: 45px;
-        padding: 80px 0;
+        padding: 50px 0 100px 0;
         margin-right: 100px;
         justify-self: center;
       
