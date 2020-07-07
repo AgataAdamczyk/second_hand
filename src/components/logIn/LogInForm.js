@@ -33,7 +33,7 @@ class LogInForm extends Component {
                     <Link id='register' to='/register/'>
                         <input  type='submit' value='Załóż konto'/>
                     </Link>
-                    <Link id='logIn' to='/logged/'>
+                    <Link id='logIn' to='/logged'>
                         <input type='submit' value='Zaloguj się'/>
                     </Link>
                 </div>

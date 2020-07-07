@@ -1,0 +1,128 @@
+.logged__header {
+    display: grid;
+    grid-template-columns: 850px 900px 150px;
+    grid-template-rows: 150px 400px 300px;
+
+    &--img {
+        max-width: 100%;
+        grid-column: 1/-1;
+    }
+
+    .header__menu {
+        display: grid;
+        justify-self: end;
+
+        &--menuList {
+            display: grid;
+            grid-template-columns: 140px 140px 140px 200px 140px;
+            grid-template-rows: 55px;
+            list-style: none;
+            justify-items: center;
+
+            li {
+                padding: 15px;
+                font-size: 18px;
+                border: 1px solid transparent;
+                font-weight: 300;
+                color: $darkerMain;
+
+                &:hover {
+                    border: 1px solid $darkerMain;
+                }
+                
+                #menu-link {
+                    text-decoration: none;
+                    color: $darkerMain;           
+                }
+            }
+        }
+
+        &--list {
+            display: grid;
+            justify-self: end;
+        }
+    }
+
+    &--title {
+        display: grid;
+        grid-column: 2/3;
+        padding: 50px 0;
+        margin-right: 100px;
+        justify-items: center;
+
+        h2 {
+            font-family: $main-font;
+            font-size: 40px;
+            font-weight: 300;
+            color: $darkerMain;
+            text-align: center;
+        }
+
+        img {
+            margin: 20px 0; 
+        }
+    }
+
+    &--info {
+        display: grid;
+        grid-column: 2/3;
+        grid-template-columns: repeat(4, 100px);
+        grid-gap: 45px;
+        padding: 80px 0;
+        margin-right: 100px;
+        justify-self: center;
+      
+        .rectangle {
+            position: relative;
+            justify-self: center;
+            align-self: center;
+
+            &::after {
+            content: '';
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border: 1px solid $darkerMain;
+            transform: rotate(45deg);
+            top: -10px;
+            right: -15px;
+            }
+ 
+            p {
+                font-family: $main-font;
+                font-weight: 300;
+                font-size: 32px;
+                text-align: center;
+            }
+
+            #rect-text {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+
+// .dropdown {
+    
+//     .e-btn-icon.e-image {
+//         background: url(../../src/images/cog-solid.svg) ;
+//         width: 32px;
+//         height: 32px;
+//     }
+    
+//     button {
+//     //   margin: 25px 5px 20px 20px;
+//         background: url(../../src/images/57.svg) ;
+//         width: 32px;
+//         height: 32px;
+//         background-repeat: no-repeat;
+//         background-position: center;
+//     }
+// }
+
+// .helloName {
+//     margin-top:8px;
+//     color: $darkerMain;
+// }

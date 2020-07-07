@@ -4,9 +4,9 @@ import '../App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 
-// import LoggedPage from './LoggedPage'
 import LogIn from './logIn/logIn';
 import Register from './register/Register';
+import LoggedPage from './logged/LoggedPage';
 
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
           < Route exact path='/' component={ Home } />
           < Route path='/logIn' component={ LogIn } />
           < Route path='/register' component={ Register } />
-            {/* <Route path='/logged/' component={LoggedPage} /> */}
+          < Route path='/logged' component={ LoggedPage } />
         </ Switch >
       </div>
     </ BrowserRouter >
