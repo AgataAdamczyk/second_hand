@@ -79,4 +79,4 @@ class FifthStep extends Component {
     }
 }
 
-export default FifthStep
+export default FifthStep;

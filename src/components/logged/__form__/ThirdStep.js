@@ -5,7 +5,8 @@ class ThirdStep extends Component {
     state = {
         page: 3,
         city: '',
-        clicked: false,
+        style: '',
+        multiBtns: '',
         orgName: '',
     }
 
@@ -36,11 +37,11 @@ class ThirdStep extends Component {
         // this.props.nextPage(this.state)
     }
 
-    handleStyle = (e) => {
+    handleMultiBtns = (e) => {
         this.setState({
-            clicked: !this.state.clicked
+            multiBtns: e.target.id,
+            style: e.target.id
         })
-        
     }
 
     handleOrgName = (e) => {
@@ -51,8 +52,9 @@ class ThirdStep extends Component {
 
     render() {
         let spanStyle = {
-            backgroundColor: (this.state.clicked?'#f8d113':'#eeede9')
+            backgroundColor: this.state.multiBtns !== '' ? '#f8d113' : 'transparent'
         }
+
         return (
             <div className='logged__form--steps'>
                 < StepCounter page={this.state.page} />
@@ -64,24 +66,29 @@ class ThirdStep extends Component {
                         onChange={this.handleChange} className='logged-form_select'>
                         <option >&nbsp;-&nbsp;wybierz&nbsp;-&nbsp;</option>
                         <option value='Wrocław'>Wrocław</option>
-                        <option value='Bielsko-Biała'>Bielsko-Biała</option>
-                        <option value='Jawor'>Jawor</option>
+                        <option value='Szczecin'>Szczecin</option>
+                        <option value='Łódź'>Łódź</option>
                         <option value='Warszawa'>Warszawa</option>
                         <option value='Katowice'>Katowice</option>
                         <option value='Kraków'>Kraków</option>
-                        <option value='Wadowice'>Wadowice</option>
+                        <option value='Poznań'>Poznań</option>
                     </select>
-                    <h3>Komu chcesz pomóc?</h3>
-                        <div>
-                            <span id={1} style={spanStyle} onClick={this.handleStyle}>dzieciom</span>
-                            <span id={2} style={spanStyle} onClick={this.handleStyle}>samotnym matkom</span>
-                            <span style={spanStyle} onClick={this.handleStyle}>bezdomnym</span>
-                            <span style={spanStyle} onClick={this.handleStyle}>niepełnosprawnym</span>
-                            <span style={spanStyle} onClick={this.handleStyle}>osobom starszym</span>
+                    <div id='multi-btns'>
+                        <h4>Komu chcesz pomóc?</h4>
+                        <div id='first-row'>
+                            <span id='1' style={spanStyle} onClick={this.handleMultiBtns}>dzieciom</span>
+                            <span id='2' style={spanStyle} onClick={this.handleMultiBtns}>samotnym matkom</span>
+                            <span id='3' style={spanStyle} onClick={this.handleMultiBtns}>bezdomnym</span>
                         </div>
-                    <h3>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h3>
-                    <input onChange={this.handleOrgName} type='text' value={this.state.orgName} id='orgName'/>
-                         
+                        <div id='second-row'>
+                            <span id='4' style={spanStyle} onClick={this.handleMultiBtns}>niepełnosprawnym</span>
+                            <span id='5' style={spanStyle} onClick={this.handleMultiBtns}>osobom starszym</span>
+                        </div>
+                    </div>
+                    <div id='select-org'>
+                        <h4>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h4>
+                        <input onChange={this.handleOrgName} type='text' value={this.state.orgName} id='orgName'/>
+                    </div>
                 </div>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>

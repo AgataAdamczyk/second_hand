@@ -1,76 +1,232 @@
 .logged__form {
     display: grid;
-    grid-template-rows: 160px 800px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 180px 780px;
+    grid-template-columns: 200px 1700px;
     background-image: url(../../src/images/barrett-ward-720419-unsplash.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: right;
 
     &--notification {
         display: grid;
         grid-column: 1/-1;
         grid-row: 1/2;
-        padding: 30px;
+        padding: 50px 200px;
         background-color: $notificationBg;
 
-        h3 {
+        h2, h3 {
             font-family: $main-font;
-            font-size: 24px;
-            color: $darkerMain;
-            font-weight: 400;
+            font-size: 34px;
+            color: $black;
+            font-weight: 600;
             margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
         }
     }
 
     &--steps {
         display: grid;
-        padding: 30px;
-        margin-left: 100px;
+        grid-column: 2/-1;
+        padding: 30px 0;
+        color: $form;
+        font-weight: 300;
+        font-family: $main-font;
 
         #step-counter {
-            color: $formCheckbox;
+            font-size: 24px;
+        }
 
+        h3 {
+            font-size: 40px;
+            font-weight: 400;
+            color: $black;
         }
 
         #first-step {
             display: grid;
-            grid-template-columns: 25px auto;
+            grid-template-columns: 40px auto;
+            grid-template-rows: repeat(5, 40px);
             grid-gap: 20px;
             padding: 20px;
-            color: $formCheckbox;
 
             input[type=checkbox] {
-                width: 25px;
-                height: 25px;
-                border: 1px solid $formCheckbox;
-
+                width: 40px;
+                height: 40px;
+                border: 1px solid $form;
+                background-color: transparent;
+                -moz-transform: scale(2);
+                -o-transform: scale(2);
+                -ms-transform: scale(2);
             }
 
             label {
+                font-size: 26px;
+                font-weight: 200;
+            }
+        }
+
+        #second-step {
+            display: grid;
+            grid-template-columns: 250px 300px;
+            grid-template-rows: 80px;
+            padding: 20px;
+            align-self: center;
+
+            span {
+                grid-column: 1/2;
+                grid-row: 1/-1;
+                align-self: center;
+                font-size: 26px;
+                font-weight: 200;
+            }
+
+            select {
+                grid-column: 2/-1;
+                grid-row: 1/-1;
+                background-color: transparent;
+                border: 1px solid $form;
+                margin: 15px 0;
+                font-family: $main-font;
                 font-size: 20px;
+                font-weight: 300; 
+                color: $form;
+                padding: 10px;
+
+                option {
+                    background-color: #f5f6f1;
+                    font-family: $main-font;
+                    font-size: 20px;
+                    font-weight: 300; 
+                    color: $form; 
+                }
+            }
+        }
+
+        #third-step {
+            display: grid;
+            grid-template-rows: 55px auto auto;
+            grid-template-columns: 20px 295px auto;
+            grid-gap: 35px 0;
+            margin-top: 20px;
+
+            select {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                background-color: transparent;
+                border: 1px solid $form;
+                font-family: $main-font;
+                font-size: 20px;
+                font-weight: 300; 
+                color: $form;
+                padding: 10px;
+
+                option {
+                    background-color: #f5f6f1;
+                    font-family: $main-font;
+                    font-size: 20px;
+                    font-weight: 300; 
+                    color: $form; 
+                }
+            }
+
+            #multi-btns {
+                display: grid;
+                grid-row: 2/3;
+                grid-template-rows: 40px 55px 55px;
+                grid-template-columns: 20px auto;
+                grid-gap: 25px 0;
+
+                h4 {
+                    grid-column: 1/-1;
+                    grid-row: 1/2;
+                    font-size: 26px;
+                    color: $black;
+                }
+
+                #first-row, 
+                #second-row {
+                    display: grid;
+                    grid-column: 2/-1;
+                    grid-row: 2/3;
+                    grid-template-columns: 150px 260px 173px;
+                    grid-gap: 20px;
+
+                    span {
+                        padding: 12px 0;
+                        border: 1px solid $form;
+                        text-align: center;
+                        font-family: $main-font;
+                        font-size: 20px;
+                        font-weight: 300; 
+                        color: $form;
+                    }
+                }
+
+                #second-row {
+                    display: grid;
+                    grid-row: 3/-1;
+                    grid-template-columns: 245px 245px;
+                }
+            }
+
+            #select-org {
+                display: grid;
+                grid-column: 1/-1;
+                grid-row: 3/-1;
+                grid-template-rows: 60px 75px 20px;
+                grid-template-columns: 20px 570px auto;
+
+                h4 {
+                    grid-column: 1/-1;
+                    grid-row: 1/2;
+                    font-size: 26px;
+                    color: $black;
+                }
+
+                input {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    padding: 15px;
+                    background-color: transparent;
+                    border: 1px solid $form;
+                    font-family: $main-font;
+                    font-size: 20px;
+                    font-weight: 300; 
+                    color: $form;
+                }
+
 
             }
         }
 
         #btnNextPrev {
-            width: 120px;
-            height: 50px;
-            color: $formCheckbox;
-            border: 1px solid $formCheckbox;
-            font-size: 18px;
-            font-family: $main-font;
+            width: 175px;
+            height: 80px;
+            border: 0.5px solid $form;
+            font-size: 26px;
+            font-weight: 200;
+            color: $form;
             background-color: transparent;
             margin-top: 30px;
+            margin-right: 40px;
             cursor: pointer;
+
+            :hover {
+                border: 1px solid $black;
+                color: $black;
+            }
         }
     }
 
     &--thanks {
         display: grid;
+        grid-column: 2/-1;
         grid-row: 1/-1;
         align-self: center;
-        margin-left: 280px;
 
         h2 {
             font-family: $main-font;

@@ -4,7 +4,15 @@ import StepCounter from './StepCounter';
 class FirstStep extends Component {
     state = {
         page: 1,
+        checked: '',
     }
+
+    handleChecked = (e) => {
+        this.setState({
+            checked: e.target.name
+        })
+    }
+
 
     handleClick = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -22,22 +30,22 @@ class FirstStep extends Component {
                 <h3>Zaznacz co chcesz oddać:</h3>
 
                 <div id='first-step'>
-                    <input type='checkbox' name='check_one'/>
+                    <input type='checkbox' name='check_one' onClick={this.handleChecked}/>
                     <label htmlFor='check_one'>ubrania, które nadają się do ponownego użycia</label>
                     
-                    <input type='checkbox' name='check_two'/>
+                    <input type='checkbox' name='check_two' onClick={this.handleChecked}/>
                     <label htmlFor='check_two'>ubrania do wyrzucenia</label>
                     
-                    <input type='checkbox' name='check_three'/>
+                    <input type='checkbox' name='check_three' onClick={this.handleChecked}/>
                     <label htmlFor='check_three'>zabawki</label>
 
-                    <input type='checkbox' name='check_four'/>
+                    <input type='checkbox' name='check_four' onClick={this.handleChecked}/>
                     <label htmlFor='check_four'>książki</label>
 
-                    <input type='checkbox' name='check_five'/>
+                    <input type='checkbox' name='check_five' onClick={this.handleChecked}/>
                     <label htmlFor='check_five'>inne</label>
                 </div>
-                <input id='btnNextPrev' onClick={this.handleClick} type='submit' value='Dalej' name={1} />
+                <input id='btnNextPrev' onClick={this.handleClick} type='submit' value='Dalej'/>
             </div>
         )
     }

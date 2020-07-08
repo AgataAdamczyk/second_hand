@@ -40,23 +40,21 @@ class SecondStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Podaj liczbę 60l worków w które spakowałeś/aś rzeczy:</h3>
             
-                <div className='second-step'>
+                <div id='second-step'>
                     <span>Liczba 60 l worków:</span>
-                        <select
-                        value={this.state.item}
-                        onChange={this.handleTitleChange} className='logged-form_select'>
-                            <option >&nbsp;-&nbsp;wybierz&nbsp;-&nbsp;</option>
-                            <option value={1}>1</option>
-                            <option value={2}>2</option>
-                            <option value={3}>3</option>
-                            <option value={4}>4</option>
-                            <option value={4}>5</option>
-                            <option value={4}>6</option>
-                            <option value={4}>7</option>
-                            <option value={4}>8</option>
-                            <option value={4}>9</option>
-                            <option value={4}>10</option>
-                        </select>
+                    <select onChange={this.handleChange}>
+                        <option value={0}>- wybierz -</option>
+                        <option value={1}>1 worek</option>
+                        <option value={2}>2 worki</option>
+                        <option value={3}>3 worki</option>
+                        <option value={4}>4 worki</option>
+                        <option value={5}>5 worków</option>
+                        <option value={6}>6 worków</option>
+                        <option value={7}>7 worków</option>
+                        <option value={8}>8 worków</option>
+                        <option value={9}>9 worków</option>
+                        <option value={10}>10 i więcej</option>
+                    </select>
                 </div>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>

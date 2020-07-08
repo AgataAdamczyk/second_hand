@@ -77,8 +77,8 @@ class LoggedForm extends Component {
 
         return (
             <form className='logged__form'>
-                {notification}
-                {page}
+                { notification }
+                { page }
             </form>
         )
     }
