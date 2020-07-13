@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+import Decor from '../../images/decoration-1.svg';
+
 class RegisterForm extends Component {
     state = {
         name: '',
@@ -24,7 +26,7 @@ class RegisterForm extends Component {
         return (
             <form onSubmit={this.handleSubmit} className='register__form'>
                 <h3 className='register__form--h3'>Zarejestruj się
-                    <img src={require('../../images/decoration-1.svg')} alt='decoration'/>
+                    <img src={ Decor } alt='decor'/>
                 </h3> 
                 <input id='name' type='text' placeholder='Imię' value={this.state.name} onChange={this.handleChange}/>  
                 <input id='email' type='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>

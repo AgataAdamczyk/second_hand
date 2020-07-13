@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import StepCounter from './StepCounter';
+
+import StepCounter from './__components__/StepCounter';
+import InputCheckbox from './__components__/InputCheckbox';
 
 class FirstStep extends Component {
     state = {
         page: 1,
-        checked: '',
     }
 
-    handleChecked = (e) => {
-        this.setState({
-            checked: e.target.name
-        })
-    }
+    // handleChecked = (e) => {
+    //     this.setState({
+    //         checked: e.target.name
+    //     })
+    // }
 
 
     handleClick = (e) => {
@@ -29,8 +30,33 @@ class FirstStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Zaznacz co chcesz oddać:</h3>
 
-                <div id='first-step'>
-                    <input type='checkbox' name='check_one' onClick={this.handleChecked}/>
+                <form id='first-step'>
+                    < InputCheckbox 
+                        name='check_one' 
+                        label='ubrania, które nadają się do ponownego użycia'
+                    />
+
+                    < InputCheckbox 
+                        name='check_two'
+                        label='ubrania do wyrzucenia'
+                    />
+
+                    < InputCheckbox 
+                        name='check_three' 
+                        label='zabawki'
+                    />
+
+                    < InputCheckbox 
+                        name='check_four' 
+                        label='książki'
+                    />
+
+                    < InputCheckbox 
+                        name='check_five' 
+                        label='inne'
+                    />
+
+                    {/* <input type='checkbox' name='check_one' onClick={this.handleChecked}/>
                     <label htmlFor='check_one'>ubrania, które nadają się do ponownego użycia</label>
                     
                     <input type='checkbox' name='check_two' onClick={this.handleChecked}/>
@@ -43,8 +69,8 @@ class FirstStep extends Component {
                     <label htmlFor='check_four'>książki</label>
 
                     <input type='checkbox' name='check_five' onClick={this.handleChecked}/>
-                    <label htmlFor='check_five'>inne</label>
-                </div>
+                    <label htmlFor='check_five'>inne</label> */}
+                </form>
                 <input id='btnNextPrev' onClick={this.handleClick} type='submit' value='Dalej'/>
             </div>
         )

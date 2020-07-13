@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class SpecialsButton extends Component {
-    render() {
-        return (
+const SpecialsButton = (props) => {
+    return (
         < NavLink to='/register' className='specials__btn--link'>
-            <span>{this.props.text}</span>
+            <span>{props.text}</span>
         </ NavLink >
-        )
-    }
+    )
 }
 
 export default SpecialsButton;

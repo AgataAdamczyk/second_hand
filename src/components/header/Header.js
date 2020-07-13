@@ -5,6 +5,8 @@ import LogBtns from './LogBtns';
 import Navigation from './Navigation';
 import HeaderBtns from './HeaderBtns';
 
+import Decor from '../../images/decoration-1.svg';
+
 const Header = () => {
     return (
         <div className='grid__container'>
@@ -19,7 +21,7 @@ const Header = () => {
                     <div className='header__title'>
                         <h2>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</h2>
                         <div className='header__title--decoration'>
-                            <img src={require('../../images/decoration-1.svg')} alt='decoration'/>
+                            <img src={ Decor } alt='decor'/>
                         </div>
                     </div>     
                     <div className='header__btns'>

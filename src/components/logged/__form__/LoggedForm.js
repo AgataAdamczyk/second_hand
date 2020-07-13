@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import LoggedNotification from './LoggedNotification';
+import LoggedNotification from './__components__/LoggedNotification';
 import FirstStep from './FirstStep';
 import SecondStep from './SecondStep';
 import ThirdStep from './ThirdStep';
@@ -76,10 +76,10 @@ class LoggedForm extends Component {
         }
 
         return (
-            <form className='logged__form'>
+            <div className='logged__form'>
                 { notification }
                 { page }
-            </form>
+            </div>
         )
     }
 }

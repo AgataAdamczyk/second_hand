@@ -3,7 +3,8 @@
     grid-template-rows: 180px 780px;
     grid-template-columns: 200px 1700px;
     background-image: url(../../src/images/barrett-ward-720419-unsplash.png);
-    background-size: 100%;
+    background-size: contain;
+    background-position: left;
     background-repeat: no-repeat;
 
     &--notification {

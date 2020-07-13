@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SingleColumn extends Component {
-    render() {
-        return (
-            <div className='three__columns--singleCol'>
-                <h2>{this.props.columnNumber}</h2>
-                <h3>{this.props.columnText}</h3>
-                <p>{this.props.columnDescription}</p>
-            </div>
-        )
-    }
+const SingleColumn = (props) => {
+    return (
+        <div className='threeColumns__singleCol'>
+            <span className='threeColumns__singleCol--number'>{props.columnNumber}</span>
+            <span className='threeColumns__singleCol--title'>{props.columnTitle}</span>
+            <span className='threeColumns__singleCol--description'>{props.columnDescription}</span>
+        </div>
+    )
 }
 
 export default SingleColumn;

@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Organization extends Component {
-    render() {
-        return (
-            <div id='row'>
-                <h3>{this.props.title}</h3>
-                <h4>Cel i misja: {this.props.description}</h4>
-                <div id='line'></div>
-            </div>
-        )
-    }
+const Organization = (props) => {
+    return (
+        <div id='row'>
+            <h3>{props.title}</h3>
+            <h4>Cel i misja: {props.description}</h4>
+            <div id='line'></div>
+        </div>
+    )
 }
 
 export default Organization;

@@ -1,15 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-class HeaderBtns extends Component {
-    render() {
-        return (
+const HeaderBtns = (props) => {
+    return (
         <NavLink to='/logIn' className='link'>
-            <span>{this.props.text}</span>
+            <span>{props.text}</span>
         </NavLink>
-        )
-    }
+    )
 }
 
 export default HeaderBtns;

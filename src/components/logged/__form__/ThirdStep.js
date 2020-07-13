@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StepCounter from './StepCounter';
+import StepCounter from './__components__/StepCounter';
 
 class ThirdStep extends Component {
     state = {
@@ -60,7 +60,7 @@ class ThirdStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Lokalizacja:</h3>
              
-                <div id='third-step'>
+                <form id='third-step'>
                     <select
                         value={this.state.city}
                         onChange={this.handleChange} className='logged-form_select'>
@@ -89,7 +89,7 @@ class ThirdStep extends Component {
                         <h4>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h4>
                         <input onChange={this.handleOrgName} type='text' value={this.state.orgName} id='orgName'/>
                     </div>
-                </div>
+                </form>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>

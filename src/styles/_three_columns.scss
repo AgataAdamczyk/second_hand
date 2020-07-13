@@ -1,25 +1,27 @@
-.three__columns {
+.threeColumns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-column-gap: 40px;
   padding: 70px 80px;
   background-image: url("../images/bg_3_columns.png");
 
-  &--singleCol {
-    display: grid;
+  .threeColumns__singleCol {
+    display: inline-grid;
     grid-template-rows: 100px 50px 100px;
-    grid-gap: 20px;
+    grid-row-gap: 20px;
     text-align: center;
     color: $darkerMain;
 
-    h2 {
+    &--number {
+      grid-row: 1/2;
       font-family: $main-font;
       font-size: 90px;
       font-weight: 300;
       color: $threeColumnIcon;
     }
       
-    h3 {
+    &--title {
+      grid-row: 2/3;
       font-family: $main-font;
       font-size: 18px;
       font-weight: 400;
@@ -27,9 +29,10 @@
       align-self: flex-end;
     }
       
-    p {
+    &--description {
+      grid-row: 3/-1;
       font-family: $menu-font;
-      padding: 10px 50px;
+      padding: 10px 40px;
       text-align: justify;
       font-size: 16px;
       font-weight: 300;

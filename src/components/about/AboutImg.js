@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Background from '../../images/about.jpg';
+
 const AboutImg = () => {
 
     return (
         <div className='about__img'>
-            <img src={require('../../images/about.jpg')} alt='about'/>
+            <img src={ Background } alt='about'/>
         </div>
     )
 }

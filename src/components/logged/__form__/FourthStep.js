@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StepCounter from './StepCounter';
+import StepCounter from './__components__/StepCounter';
 
 const DecorLine = () => {
     return(
@@ -39,7 +39,7 @@ class FourthStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Wybierz organizację, której chcesz pomóc:</h3>
                
-                <div id='fourth-step'>
+                <form id='fourth-step'>
                     <DecorLine/>
                     <input type='checkbox' name='check_one'/>
                     <label htmlFor='check_one'>Fundacja "Dbam o zdrowie"</label>
@@ -50,7 +50,7 @@ class FourthStep extends Component {
                     <label htmlFor='check_two'>Fundacja "Bez domu"</label>
                     <small className='secondSmall'>Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</small>
                     <DecorLine/>
-                </div>
+                </form>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>

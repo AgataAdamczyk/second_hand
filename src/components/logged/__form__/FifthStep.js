@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StepCounter from './StepCounter';
+import StepCounter from './__components__/StepCounter';
 
 class FifthStep extends Component {
     state = {
@@ -46,7 +46,7 @@ class FifthStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera</h3>
                
-                <div id='fifth-step'>
+                <form id='fifth-step'>
                     <h4>Adres odbioru</h4>
                         <label>Ulica</label>
                         <input type='text' value={this.state.street} name='street' onChange={this.handleChange}/>
@@ -69,7 +69,7 @@ class FifthStep extends Component {
                         
                         <label>Uwagi dla kuriera</label>
                         <textarea type='text' value={this.state.courierInfo} name='courierInfo' onChange={this.handleChange}/>
-                </div>
+                </form>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
