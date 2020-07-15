@@ -40,7 +40,7 @@ class SecondStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Podaj liczbę 60l worków w które spakowałeś/aś rzeczy:</h3>
             
-                <form id='second-step'>
+                <div id='second-step'>
                     <span>Liczba 60 l worków:</span>
                     <select onChange={this.handleChange}>
                         <option value={0}>- wybierz -</option>
@@ -55,7 +55,7 @@ class SecondStep extends Component {
                         <option value={9}>9 worków</option>
                         <option value={10}>10 i więcej</option>
                     </select>
-                </form>
+                </div>
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>

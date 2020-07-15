@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StepCounter from './__components__/StepCounter';
+import OrderForm from './__components__/OrderForm';
 
 class FifthStep extends Component {
     state = {
@@ -45,31 +46,9 @@ class FifthStep extends Component {
             <div className='logged__form--steps'> 
                 < StepCounter page={this.state.page} />
                 <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera</h3>
-               
-                <form id='fifth-step'>
-                    <h4>Adres odbioru</h4>
-                        <label>Ulica</label>
-                        <input type='text' value={this.state.street} name='street' onChange={this.handleChange}/>
-                        
-                        <label>Miasto</label>
-                        <input type='text' value={this.state.city} name='city' onChange={this.handleChange}/>
-                        
-                        <label>Kod pocztowy</label>
-                        <input type='text' value={this.state.postCode} name='postCode'onChange={this.handleChange}/>
-                        
-                        <label>Numer telefonu</label>
-                        <input type='text' value={this.state.phone} name='phone' onChange={this.handleChange}/>
-                       
-                    <h4>Termin odbioru</h4>
-                        <label>Data</label>
-                        <input type='text' value={this.state.date} name='date'onChange={this.handleChange}/>
-                        
-                        <label>Godzina</label>
-                        <input type='text' value={this.state.time} name='time' onChange={this.handleChange}/>
-                        
-                        <label>Uwagi dla kuriera</label>
-                        <textarea type='text' value={this.state.courierInfo} name='courierInfo' onChange={this.handleChange}/>
-                </form>
+
+                < OrderForm />
+                
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
