@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const SingleInput = ({
     name,
     label,
-    checked = false,
+    values,
+    placeholder,
     onChange
 }) => (
     <>
@@ -12,7 +13,8 @@ const SingleInput = ({
         <input
             type='text'
             name={name}
-            checked={checked}
+            values={values}
+            placeholder={placeholder}
             onChange={onChange} 
         />
     </>
@@ -21,7 +23,8 @@ const SingleInput = ({
 SingleInput.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    checked: PropTypes.bool,
+    values: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired
 };
 

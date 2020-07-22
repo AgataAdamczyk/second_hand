@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
+
 import StepCounter from './__components__/StepCounter';
 import OrderForm from './__components__/OrderForm';
 
 class FifthStep extends Component {
     state = {
         page: 5,
-        street: '',
-        city: '',
-        postCode: '',
-        phone: '',
-        date: '',
-        time: '',
-        courierInfo: '',
-    }
-
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+        // street: '',
+        // city: '',
+        // postCode: '',
+        // phone: '',
+        // date: '',
+        // time: '',
+        // courierInfo: '',
     }
 
     handleClickNext = (e) => {
@@ -47,7 +42,7 @@ class FifthStep extends Component {
                 < StepCounter page={this.state.page} />
                 <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera</h3>
 
-                < OrderForm />
+                < OrderForm values={this.props.values} handleOrderForm={this.props.handleOrderForm}/>
                 
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>

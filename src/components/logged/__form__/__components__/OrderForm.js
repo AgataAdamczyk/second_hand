@@ -32,21 +32,21 @@ const inputsRight = [
 ];
 
 class OrderForm extends Component {
-    state = {
-        street: '',
-        city: '',
-        postCode: '',
-        phone: '',
-        date: '',
-        time: '',
-        courierInfo: '',
-    }
+    // state = {
+    //     street: '',
+    //     city: '',
+    //     postCode: '',
+    //     phone: '',
+    //     date: '',
+    //     time: '',
+    //     courierInfo: '',
+    // }
 
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+    // handleChange = e => {
+    //     this.setState({
+    //         [e.target.name]: e.target.value
+    //     })
+    // }
 
     render() {
         return (
@@ -60,8 +60,9 @@ class OrderForm extends Component {
                             key={item.name}
                             label={item.label}
                             name={item.name}
-                            value={item.name}
-                            onChange={this.handleChange} 
+                            placeholder={this.props.placeholder}
+                            values={this.props.values}
+                            onChange={this.props.handleOrderForm} 
                         />
                     ))}
                 </div>
@@ -74,12 +75,14 @@ class OrderForm extends Component {
                             key={item.name}
                             label={item.label}
                             name={item.name}
-                            onChange={this.handleChange} 
+                            placeholder={this.props.values}
+                            values={this.props.values}
+                            onChange={this.props.handleOrderForm} 
                         />
                     ))}  
 
                     <label>Uwagi dla kuriera</label>
-                    <textarea type='text' value={this.state.courierInfo} name='courierInfo' onChange={this.handleChange}/>
+                    <textarea type='text' values={this.props.values} name='courierInfo' onChange={this.props.handleOrderForm}/>
                 </div>
             </div>
         )

@@ -5,42 +5,36 @@ import InputCheckbox from './__components__/InputCheckbox';
 
 const checkboxes = [
     {
-        name: 'check_one',
+        name: 'bcheckbox_1',
         label: 'ubrania, które nadają się do ponownego użycia',
+        value: 'ubrań w dobrym stanie',
     },
     {
-        name: 'check_two',
-        label: 'ubrania do wyrzucenia',
+        name: 'checkbox_2',
+        label: 'żywność',
+        value: 'żywności',
     },
     {
-        name: 'check_three',
+        name: 'checkbox_3',
         label: 'zabawki',
+        value: 'zabawek',
     },
     {
-        name: 'check_four',
+        name: 'checkbox_4',
         label: 'książki',
+        value: 'książek',
     },
     {
-        name: 'check_five',
+        name: 'checkbox_5',
         label: 'inne',
+        value: 'innych rzeczy w dobrym stanie',
     },
 ];
 
 class FirstStep extends Component {
     state = {
         page: 1,
-        checkedBox: new Map(),
     }
-
-    handleChecked = (e) => {
-        let item = e.target.name,
-            isChecked = e.target.checked;
-
-        this.setState(prevState => ({
-            checkedBox: prevState.checkedBox.set(item, isChecked)
-        }))
-    }
-
 
     handleClick = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -63,8 +57,9 @@ class FirstStep extends Component {
                             key={item.name}
                             label={item.label}
                             name={item.name} 
-                            checked={this.state.checkedBox.get(item.name)} 
-                            onChange={this.handleChecked} 
+                            value={item.value}
+                            checked={this.props.checkedBox.get(item.callback)} 
+                            onChange={this.props.handleChecked} 
                         />
                     ))}
                 </div>

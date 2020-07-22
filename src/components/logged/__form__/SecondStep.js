@@ -4,13 +4,6 @@ import StepCounter from './__components__/StepCounter';
 class SecondStep extends Component {
     state = {
         page: 2,
-        quantity: '',
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            quantity: e.target.value
-        })
     }
 
     handleClickNext = (e) => {
@@ -42,7 +35,7 @@ class SecondStep extends Component {
             
                 <div id='second-step'>
                     <span>Liczba 60 l worków:</span>
-                    <select onChange={this.handleChange}>
+                    <select onChange={this.props.handleChange}>
                         <option value={0}>- wybierz -</option>
                         <option value={1}>1 worek</option>
                         <option value={2}>2 worki</option>

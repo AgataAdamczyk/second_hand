@@ -5,6 +5,9 @@ import Bag from '../../../images/bag.png';
 import Hand from '../../../images/hand.png';
 
 class FormSummary extends Component {
+    state = {
+        placeholder: this.props.values
+    }
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -36,15 +39,15 @@ class FormSummary extends Component {
                 
                     <div>
                         <img src={ Bag } alt='bag'/>
-                        4 worki ubrań w dobrym stanie dla dzieci
+                        {this.props.quantity} worki {this.props.checkedBox} dla dzieci
                     </div>
 
                     <div>
                         <img src={ Hand } alt='hand'/>
-                        Dla fundacji "Mam marzenie" we Wrocławiu
+                     
                     </div>
-         
-                < OrderForm value={this.props.value} />
+
+                < OrderForm placeholder={this.state.placeholder} />
 
                 <div>
                     <input id='btnNextPrev' onClick={this.handleClickPrev} type='submit' value='Wstecz'/>

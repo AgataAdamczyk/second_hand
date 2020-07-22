@@ -102,7 +102,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            input[type=submit] {
+            button {
                 font-size: 18px;
                 padding: 15px;
                 color: $darkerMain;

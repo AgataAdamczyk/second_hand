@@ -13,13 +13,13 @@ class RegisterForm extends Component {
 
     handleChange = (e) => {
         this.setState({
-            [e.target.id]: e.target.value,
+            [e.target.name]: e.target.value,
         })    
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        console.log('form submitted');
     }
     
     render() {
@@ -28,17 +28,17 @@ class RegisterForm extends Component {
                 <h3 className='register__form--h3'>Zarejestruj się
                     <img src={ Decor } alt='decor'/>
                 </h3> 
-                <input id='name' type='text' placeholder='Imię' value={this.state.name} onChange={this.handleChange}/>  
-                <input id='email' type='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
-                <input id='password' type='password' placeholder='Hasło' value={this.state.password} onChange={this.handleChange}/>
-                <input id='confirmPassword' type='password' placeholder='Powtórz hasło' value={this.state.confirmPassword} onChange={this.handleChange}/>
+                <input type='text' name='name' placeholder='Imię' value={this.state.name} onChange={this.handleChange} required/>  
+                <input type='email' name='email' placeholder='Email' value={this.state.email} onChange={this.handleChange} required/>
+                <input type='password' name='password' placeholder='Hasło' value={this.state.password} onChange={this.handleChange} required/>
+                <input type='password' name='confirmPassword' placeholder='Powtórz hasło' value={this.state.confirmPassword} onChange={this.handleChange} required/>
                            
                 <div className="register__form--btns">
                     <Link id='register' to='/register'>
-                        <input  type='submit' value='Załóż konto'/>
+                        <button type='submit'>Załóż konto</button>
                     </Link>
                     <Link id='logIn' to='/logged'>
-                        <input type='submit' value='Zaloguj się'/>
+                        <button type='submit'>Zaloguj się</button>
                     </Link>
                 </div>
             </form>

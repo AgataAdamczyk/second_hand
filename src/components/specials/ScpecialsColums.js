@@ -1,14 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SpecialsColumn = (props) => {
+const SpecialsColumn = ({
+    image,
+    specialsText,
+    specialsItems,
+}) => {
     return (
         <div className='specials__columns--singleCol'>
-            <img src={props.image} alt='icon'/>
-            <h2>{props.specialsText}</h2>
+            <img src={image} alt='icon'/>
+            <h2>{specialsText}</h2>
             <span id='underline'></span>
-            <h3>{props.specialsItems}</h3>
+            <h3>{specialsItems}</h3>
         </div>
     )
 }
+
+SpecialsColumn.propTypes = {
+    image: PropTypes.object.isRequired,
+    specialsText: PropTypes.string.isRequired,
+    specialsItems: PropTypes.string.isRequired,
+};
 
 export default SpecialsColumn;

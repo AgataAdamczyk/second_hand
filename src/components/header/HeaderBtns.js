@@ -1,13 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
-const HeaderBtns = (props) => {
+const HeaderBtns = ({ text }) => {
     return (
         <NavLink to='/logIn' className='link'>
-            <span>{props.text}</span>
+            <span>{text}</span>
         </NavLink>
     )
 }
+
+HeaderBtns.propTypes = {
+    text: PropTypes.string.isRequired,
+};
 
 export default HeaderBtns;
