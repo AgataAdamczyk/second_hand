@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import Decor from '../header/Decor';
+import FormBtns from '../signUp/FormBtns';
 
-class LogInForm extends Component {
+class LoginForm extends Component {
     state = {
         email: '',
-        password: '',
-        confirmPassword: ''
+        password: ''
     }
 
     handleChange = (e) => {
@@ -21,25 +21,17 @@ class LogInForm extends Component {
     
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className='logIn__form'>
-                <h3 className='logIn__form--h3'>Zaloguj się
-                    <img src={require('../../images/decoration-1.svg')} alt='decoration'/>
+            <form onSubmit={this.handleSubmit} className='login__form'>
+                <h3 className='login__form--h3'>Zaloguj się
+                    < Decor />
                 </h3>   
                 <input id='email' type='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
                 <input id='password' type='password' placeholder='Hasło' value={this.state.password} onChange={this.handleChange}/>
-                <input id='confirmPassword' type='password' placeholder='Powtórz hasło' value={this.state.confirmPassword} onChange={this.handleChange}/>
                            
-                <div className="logIn__form--btns">
-                    <Link id='register' to='/register/'>
-                        <input  type='submit' value='Załóż konto'/>
-                    </Link>
-                    <Link id='logIn' to='/logged'>
-                        <input type='submit' value='Zaloguj się'/>
-                    </Link>
-                </div>
+                < FormBtns />
             </form>
         )
     }
 }
 
-export default LogInForm;
+export default LoginForm;

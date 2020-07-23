@@ -73,6 +73,8 @@
         }
 
         .header__title {
+            display: grid;
+            padding: 0 40px;
             align-self: flex-end;
             justify-self: center;
 
@@ -84,7 +86,8 @@
                 margin-bottom: 30px;
             }
              
-            &--decoration {
+            #decor {
+                margin-top: 20px;
                 text-align: center;
             }
         }

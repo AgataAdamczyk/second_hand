@@ -7,7 +7,7 @@ import Foundations from './Foundations';
 import NonGovOrg from './NonGovOrg';
 import LocalCollection from './LocalCollection';
 
-import Decor from '../../images/decoration-1.svg';
+import Decor from '../header/Decor';
 
 const Menu = () => {
     return (
@@ -15,7 +15,7 @@ const Menu = () => {
             <section name='Menu' className='grid__container'>
                 <div className='menu'>
                     <h2>Komu pomagamy?
-                        <img src={ Decor } alt='decor' id='menu-decor'/>
+                        < Decor />
                     </h2>
                 < MenuNavigation />
                     <Switch >

@@ -2,20 +2,20 @@ import React from 'react';
 
 import Navigation from '../header/Navigation';
 import LogBtns from '../header/LogBtns';
-import LogInForm from './LogInForm';
+import LoginForm from './LoginForm';
 
-const LogIn = () => {
+const Login = () => {
     return (
-        <section name='LogIn' className='grid__container'>
-            <div className='logIn'>
+        <section name='Login' className='grid__container'>
+            <div className='login'>
                 <div className='header__menu'>
                     < LogBtns />
                     < Navigation />
                 </div>
-                < LogInForm />
+                < LoginForm />
             </div>
         </section>
     )
 }
 
-export default LogIn;
+export default Login;

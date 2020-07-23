@@ -1,13 +1,12 @@
 import React from 'react';
-import LogInBtn from './LogInBtn';
-import RegisterBtn from './RegisterBtn';
-
+import LoginBtn from './LoginBtn';
+import SignUpBtn from './SignUpBtn';
 
 const LogBtns = () => { 
     return (
         <ul className='header__menu--log'>
-            <li>< LogInBtn /></li>
-            <li>< RegisterBtn /></li>
+            <li>< LoginBtn /></li>
+            <li>< SignUpBtn /></li>
         </ul>
     )
 }

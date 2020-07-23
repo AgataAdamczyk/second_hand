@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const LogInBtn = () => {
     return (
-        <NavLink to='/logIn' className='link'>
+        <NavLink to='/login' className='link'>
             <span>Zaloguj</span>
         </NavLink>
     )

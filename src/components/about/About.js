@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutImg from './AboutImg';
 
-import Decor from '../../images/decoration-1.svg';
+import Decor from '../header/Decor';
 import Signature from '../../images/signature.svg';
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
             <div className='about'>
                 <div className='about__info'>
                     <h3>O nas
-                        <img src={ Decor } alt='decor' id='about-decoration'/>
+                        < Decor />
                     </h3>
                     <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                     <img src={ Signature } alt='signature' className='about__info--signature' />

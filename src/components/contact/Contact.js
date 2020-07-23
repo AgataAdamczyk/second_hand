@@ -1,14 +1,14 @@
 import React from 'react';
 
 import ContactForm from './ContactForm';
-import Decor from '../../images/decoration-1.svg';
+import Decor from '../header/Decor';
 
 const Contact = () => {
     return (
         <div name='Contact' className='grid__container'>
             <div className='contact'>
                 <h2 className='contact--h2'>Skontaktuj sie z nami
-                    <img src={ Decor } alt='decor'/>
+                    < Decor />
                 </h2>
                 < ContactForm />  
             

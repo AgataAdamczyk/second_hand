@@ -4,8 +4,8 @@ import '../App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 
-import LogIn from './logIn/logIn';
-import Register from './register/Register';
+import Login from './login/Login';
+import SignUp from './signUp/SignUp';
 import LoggedPage from './logged/LoggedPage';
 
 
@@ -15,9 +15,9 @@ const App = () => {
       <div className='App'>
         < Switch >
           < Route exact path='/' component={ Home } />
-          < Route path='/logIn' component={ LogIn } />
-          < Route path='/register' component={ Register } />
-          < Route path='/logged' component={ LoggedPage } />
+          < Route exact path='/login' component={ Login } />
+          < Route exact path='/signup' component={ SignUp } />
+          < Route exact path='/logged' component={ LoggedPage } />
         </ Switch >
       </div>
     </ BrowserRouter >

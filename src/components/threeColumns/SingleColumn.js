@@ -1,13 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SingleColumn = (props) => {
+const SingleColumn = ({
+    columnNumber,
+    columnTitle,
+    columnDescription,
+}) => {
     return (
         <div className='threeColumns__singleCol'>
-            <span className='threeColumns__singleCol--number'>{props.columnNumber}</span>
-            <span className='threeColumns__singleCol--title'>{props.columnTitle}</span>
-            <span className='threeColumns__singleCol--description'>{props.columnDescription}</span>
+            <span className='threeColumns__singleCol--number'>{columnNumber}</span>
+            <span className='threeColumns__singleCol--title'>{columnTitle}</span>
+            <span className='threeColumns__singleCol--description'>{columnDescription}</span>
         </div>
     )
 }
+
+SingleColumn.propTypes = {
+    columnNumber: PropTypes.number.isRequired,
+    columnTitle: PropTypes.string.isRequired,
+    columnDescription: PropTypes.string.isRequired,
+};
 
 export default SingleColumn;

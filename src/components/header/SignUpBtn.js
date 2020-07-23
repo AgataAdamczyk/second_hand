@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const RegisterBtn = () => {
+const SignUpBtn = () => {
     return (
-        <NavLink to='/register' className='link'>
+        <NavLink to='/signup' className='link'>
             <span>Załóż konto</span>
         </NavLink> 
     )
 }
 
 
-export default RegisterBtn;
+export default SignUpBtn;

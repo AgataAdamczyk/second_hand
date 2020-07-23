@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-const SpecialsButton = (props) => {
+const SpecialsButton = ({ text }) => {
     return (
-        < NavLink to='/register' className='specials__btn--link'>
-            <span>{props.text}</span>
+        < NavLink to='/signup' className='specials__btn--link'>
+            <span>{text}</span>
         </ NavLink >
     )
 }
+
+SpecialsButton.propTypes = {
+    text: PropTypes.string.isRequired,
+};
 
 export default SpecialsButton;

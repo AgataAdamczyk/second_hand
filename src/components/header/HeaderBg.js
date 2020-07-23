@@ -1,8 +1,9 @@
 import React from 'react';
+import BgImg from '../../images/header_start_img.jpg'
 
 const HeaderBg = () => {
     return (
-        <img className='header__img' src={require('../../images/header_start_img.jpg')} alt='header_bg'/>
+        <img className='header__img' src={ BgImg } alt='header_bg'/>
     )
 }
 

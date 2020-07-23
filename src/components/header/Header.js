@@ -5,7 +5,7 @@ import LogBtns from './LogBtns';
 import Navigation from './Navigation';
 import HeaderBtns from './HeaderBtns';
 
-import Decor from '../../images/decoration-1.svg';
+import Decor from '../../components/header/Decor';
 
 const Header = () => {
     return (
@@ -19,10 +19,10 @@ const Header = () => {
                         < Navigation />
                     </div>
                     <div className='header__title'>
-                        <h2>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</h2>
-                        <div className='header__title--decoration'>
-                            <img src={ Decor } alt='decor'/>
-                        </div>
+                        <h2>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce 
+                            < Decor />
+                        </h2>
+                      
                     </div>     
                     <div className='header__btns'>
                         < HeaderBtns text='oddaj rzeczy' />

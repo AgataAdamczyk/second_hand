@@ -8,7 +8,7 @@ import { specialsColumns } from '../../data/specialsColumns';
 
 const Specials = () => {
     return (
-        <section name='Specials' className="grid__container">
+        <section name='Specials' className='grid__container'>
             <div className='specials'>
                 <div className='specials__title'>
                     <h2 className='specials__title--header'>Wystarczą 4 proste kroki</h2> 
@@ -16,7 +16,7 @@ const Specials = () => {
                 </div>
                 <div className='specials__columns'>
                     {specialsColumns.map(item => (
-                        < SpecialsColumns {...item} />
+                        < SpecialsColumns key={item.image} {...item} />
                     ))}
                 </div>
 

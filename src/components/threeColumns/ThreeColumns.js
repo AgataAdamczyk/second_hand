@@ -7,7 +7,7 @@ const ThreeColumns = () => {
         <section className='grid__container' name='ThreeColumns'>
             <div className='threeColumns'>
                 {threeColumns.map(item => (
-                    < SingleColumn {...item} />
+                    < SingleColumn key={item.columnNumber} {...item} />
                 ))}
             </div>
         </section>

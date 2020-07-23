@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const HeaderBtns = ({ text }) => {
     return (
-        <NavLink to='/logIn' className='link'>
+        <NavLink to='/login' className='link'>
             <span>{text}</span>
         </NavLink>
     )

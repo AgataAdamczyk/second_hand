@@ -1,0 +1,27 @@
+.form__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    button {
+        font-size: 18px;
+        padding: 15px;
+        color: $darkerMain;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            border: 1px solid $darkerMain;
+
+        }
+    }
+
+    #signup {
+        justify-self: start;
+        align-self: end;
+    }
+
+    #login {
+        justify-self: end;
+        align-self: end;
+    }
+}
