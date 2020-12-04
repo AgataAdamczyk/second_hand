@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { nonGovOrg } from '../../data/organizations';
 import Organizations from './Organizations';
 

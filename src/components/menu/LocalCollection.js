@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { localCollection } from '../../data/organizations';
 import Organizations from './Organizations';
 

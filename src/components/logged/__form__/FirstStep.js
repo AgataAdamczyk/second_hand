@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import StepCounter from './__components__/StepCounter';
 import InputCheckbox from './__components__/InputCheckbox';
 

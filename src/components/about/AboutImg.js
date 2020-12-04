@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Background from '../../images/about.jpg';
 
 const AboutImg = () => {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Decor from '../../../images/decoration-1.svg';
 
 class FormThanks extends Component {

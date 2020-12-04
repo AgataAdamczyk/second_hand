@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link, Events} from 'react-scroll';
 
-
 class Navigation extends Component {
     componentDidMount() {
         Events.scrollEvent.register('begin', function () {

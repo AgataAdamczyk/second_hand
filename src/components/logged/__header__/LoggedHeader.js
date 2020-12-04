@@ -1,5 +1,4 @@
 import React from 'react';
-
 import LoggedList from './LoggedList';
 import Navigation from '../../header/Navigation';
 import LoggedInfo from './LoggedInfo';

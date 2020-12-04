@@ -1,10 +1,9 @@
 import React from 'react';
-
 import Navigation from '../header/Navigation';
 import LogBtns from '../header/LogBtns';
-import LoginForm from './LoginForm';
+import LogInForm from './LogInForm';
 
-const Login = () => {
+const LogIn = () => {
     return (
         <section name='Login' className='grid__container'>
             <div className='login'>
@@ -12,10 +11,10 @@ const Login = () => {
                     < LogBtns />
                     < Navigation />
                 </div>
-                < LoginForm />
+                < LogInForm />
             </div>
         </section>
     )
 }
 
-export default Login;
+export default LogIn;

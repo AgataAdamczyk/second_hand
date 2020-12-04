@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ContactForm from './ContactForm';
 import Decor from '../header/Decor';
 

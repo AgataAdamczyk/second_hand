@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import LoggedNotification from './__components__/LoggedNotification';
 import FirstStep from './FirstStep';
 import SecondStep from './SecondStep';

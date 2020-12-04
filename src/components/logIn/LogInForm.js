@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Decor from '../header/Decor';
 import FormBtns from '../signUp/FormBtns';
 
-class LoginForm extends Component {
+class LogInForm extends Component {
     state = {
         email: '',
         password: ''
@@ -34,4 +34,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+export default LogInForm;

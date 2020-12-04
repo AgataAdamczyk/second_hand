@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutImg from './AboutImg';
-
 import Decor from '../header/Decor';
 import Signature from '../../images/signature.svg';
 

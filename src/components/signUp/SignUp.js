@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Navigation from '../header/Navigation';
 import LogBtns from '../header/LogBtns';
 import SignUpForm from './SignUpForm';

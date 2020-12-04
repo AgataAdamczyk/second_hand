@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HeaderBg from './HeaderBg';
 import LogBtns from './LogBtns';
 import Navigation from './Navigation';

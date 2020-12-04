@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { foundations } from '../../data/organizations';
 import Organizations from './Organizations';
 

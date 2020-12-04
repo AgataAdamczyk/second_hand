@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import OrderForm from './__components__/OrderForm';
-
 import Bag from '../../../images/bag.png';
 import Hand from '../../../images/hand.png';
 

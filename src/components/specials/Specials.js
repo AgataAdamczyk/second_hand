@@ -1,8 +1,6 @@
 import React from 'react';
-
 import SpecialsColumns from './ScpecialsColums';
 import SpecialsBtn from './SpecialsBtn';
-
 import Decor from '../../images/decoration-1.svg';
 import { specialsColumns } from '../../data/specialsColumns';
 
