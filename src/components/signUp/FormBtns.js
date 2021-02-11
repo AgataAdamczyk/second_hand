@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FormBtns = () => {
     return (
         <div className='form__btns'>
-            <Link id='signup' to='/signup'>
+            <Link id='signup' to='/login'>
                 <button type='submit'>Załóż konto</button>
             </Link>
             <Link id='login' to='/logged'>
@@ -13,6 +13,5 @@ const FormBtns = () => {
         </div>
     )
 }
-
 
 export default FormBtns;
