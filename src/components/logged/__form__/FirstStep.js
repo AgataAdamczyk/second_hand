@@ -33,7 +33,7 @@ const checkboxes = [
 class FirstStep extends Component {
     state = {
         page: 1,
-    }
+    };
 
     handleClick = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -42,7 +42,7 @@ class FirstStep extends Component {
             console.log('To nie funkcja');
         }
         e.preventDefault();
-    }
+    };
     
     render() {
         return (
@@ -64,8 +64,8 @@ class FirstStep extends Component {
                 </div>
                 <input id='btnNextPrev' onClick={this.handleClick} type='submit' value='Dalej'/>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default FirstStep;

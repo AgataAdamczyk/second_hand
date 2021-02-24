@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 import ContactForm from './ContactForm';
-import Decor from '../header/Decor';
+import SectionTitle from '../SectionTitle';
 
 const Contact = () => {
     return (
-        <div name='Contact' className='grid__container'>
+        <div name='Contact' className='container'>
             <div className='contact'>
-                <h2 className='contact--h2'>Skontaktuj sie z nami
-                    < Decor />
-                </h2>
-                < ContactForm />  
+                <SectionTitle>Skontaktuj się z nami</SectionTitle>
+                <ContactForm />  
             
                 <footer className='footer'>
                     <div className='footer__media'>
@@ -20,7 +18,7 @@ const Contact = () => {
                 </footer>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Contact;

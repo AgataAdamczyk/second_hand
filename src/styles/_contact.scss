@@ -8,22 +8,11 @@
   background-repeat: no-repeat;
   font-family: $main-font;
 
-  &--h2 {
-    display: grid;
+  .secttion__title {
     grid-column: 2/-1;
-    justify-self: center;
-    align-self: end;
-    font-size: 40px;
-    color: $darkerMain;
-    font-weight: 400;
-
-    #decor {
-      justify-self: center;
-      margin: 15px 0;
-    }
   }
 
-  .contact__form {
+  &__form {
     display: grid;
     grid-column: 2/-1;
     grid-template-columns: repeat(2, 250px);
@@ -68,7 +57,7 @@
       grid-column: 1/-1;
     }
 
-    #btn {
+    .contnct__form--btn {
       grid-column: 1/-1;
       justify-self: center;
       margin-top: 50px;

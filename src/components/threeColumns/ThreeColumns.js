@@ -4,14 +4,14 @@ import SingleColumn from './SingleColumn';
 
 const ThreeColumns = () => {
     return (
-        <section className='grid__container' name='ThreeColumns'>
+        <section className='container' name='ThreeColumns'>
             <div className='threeColumns'>
                 {threeColumns.map(item => (
-                    < SingleColumn key={item.columnNumber} {...item} />
+                    <SingleColumn key={item.columnNumber} {...item} />
                 ))}
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default ThreeColumns;

@@ -4,13 +4,13 @@ import StepCounter from './__components__/StepCounter';
 const DecorLine = () => {
     return(
         <span id='line'>-------</span>
-    )
-}
+    );
+};
 
 class FourthStep extends Component {
     state = {
         page: 4,
-    }
+    };
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -20,7 +20,7 @@ class FourthStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
     
     handleClickPrev = (e) => {
         if(typeof this.props.prevPage == 'function') {
@@ -31,7 +31,7 @@ class FourthStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
 
     render() {
         return (
@@ -56,8 +56,8 @@ class FourthStep extends Component {
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default FourthStep;

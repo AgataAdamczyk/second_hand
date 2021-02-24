@@ -25,19 +25,19 @@ class LoggedForm extends Component {
         date: '',
         time: '',
         courierInfo: '',
-    }
+    };
 
     nextPage = () => {
         this.setState({
             page: this.state.page + 1
-        })
-    }
+        });
+    };
 
     prevPage = () => {
         this.setState({
             page: this.state.page - 1
-        })
-    }
+        });
+    };
 
     // First Step Page 
 
@@ -47,8 +47,8 @@ class LoggedForm extends Component {
 
         this.setState(prevState => ({
             checkedBox: prevState.checkedBox.set(item, isChecked)
-        }))
-    }
+        }));
+    };
 
     
     // Second Step Page 
@@ -56,38 +56,37 @@ class LoggedForm extends Component {
     handleChange = (e) => {
         this.setState({
             quantity: e.target.value,
-        })
-    }
+        });
+    };
 
     // Third Step Page 
 
     handleOrgCity = (e) => {
         this.setState({
             orgCity: e.target.value,
-        })
-    }
+        });
+    };
 
     handleOrgOptions = (e) => {
         this.setState({
             orgOptions: [e.target.id],
             clicked: [e.target.id]
-        })
-    }
+        });
+    };
 
     handleOrgName = (e) => {
         this.setState({
             orgName: e.target.value,
-        })
-    }
+        });
+    };
 
     // Fifth Step Page 
 
     handleOrderForm = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-        })
-    }
-
+        });
+    };
 
     render() {
         let page, 
@@ -171,8 +170,8 @@ class LoggedForm extends Component {
                 { notification }
                 { page }
             </form>
-        )
-    }
-}
+        );
+    };
+};
 
 export default LoggedForm;

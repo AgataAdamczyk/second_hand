@@ -1,12 +1,10 @@
 import React from 'react';
-
 import Header from './header/Header';
 import ThreeColumns from './threeColumns/ThreeColumns';
 import Specials from './specials/Specials';
-import About from './about/About.js';
+import About from './about/About';
 import Menu from './menu/Menu';
 import Contact from './contact/Contact';
-
 
 const Home = () => {
   return (
@@ -18,7 +16,7 @@ const Home = () => {
       <Menu />
       <Contact />
     </>
-  )
-}
+  );
+};
 
 export default Home;

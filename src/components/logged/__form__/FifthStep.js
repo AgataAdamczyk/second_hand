@@ -12,7 +12,7 @@ class FifthStep extends Component {
         // date: '',
         // time: '',
         // courierInfo: '',
-    }
+    };
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -22,7 +22,7 @@ class FifthStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
     
     handleClickPrev = (e) => {
         if(typeof this.props.prevPage == 'function') {
@@ -33,7 +33,7 @@ class FifthStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
 
     render() {
         return (
@@ -48,8 +48,8 @@ class FifthStep extends Component {
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default FifthStep;

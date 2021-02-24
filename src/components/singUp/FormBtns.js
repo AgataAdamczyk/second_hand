@@ -11,7 +11,7 @@ const FormBtns = () => {
                 <button type='submit'>Zaloguj się</button>
             </Link>
         </div>
-    )
-}
+    );
+};
 
 export default FormBtns;

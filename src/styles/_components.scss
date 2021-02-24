@@ -1,0 +1,21 @@
+.btn {
+    cursor: pointer;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.section__title {
+    font-family: $main-font;
+    font-size: 40px;
+    color: $darkerMain;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+
+    &--decor {
+        width: 240px;
+        margin: 20px auto;
+    }
+}

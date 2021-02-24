@@ -4,7 +4,7 @@ import StepCounter from './__components__/StepCounter';
 class SecondStep extends Component {
     state = {
         page: 2,
-    }
+    };
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -14,7 +14,7 @@ class SecondStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
     
     handleClickPrev = (e) => {
         if(typeof this.props.prevPage == 'function') {
@@ -25,7 +25,7 @@ class SecondStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
 
     render() {
         return (
@@ -54,8 +54,8 @@ class SecondStep extends Component {
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default SecondStep;

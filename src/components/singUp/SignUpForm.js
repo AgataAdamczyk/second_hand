@@ -2,8 +2,9 @@ import React, { useRef, useState } from 'react';
 import { withRouter } from 'react-router';
 import { useAuth } from '../AuthContext';
 import { Link, useHistory } from 'react-router-dom';
-import Decor from '../header/Decor';
-// import FormBtns from './FormBtns';
+// import Input from '../Input/Input';
+import Button from '../buttons/Button';
+import SectionTitle from '../SectionTitle';
 
 const SignUpForm = () => {
     const nameRef = useRef();
@@ -19,39 +20,37 @@ const SignUpForm = () => {
         e.preventDefault();
 
         if(passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Wprowadziłeś dwa rózne hasła')
-        }
+            return setError('Wprowadziłeś dwa rózne hasła');
+        };
 
         try {
             setError('');
             setLoading(true);
-            await signup(emailRef.current.value, passwordRef.current.value) 
-            history.push("/login");
+            await signup(nameRef.current.value ,emailRef.current.value, passwordRef.current.value);
+            history.push('/login');
         } catch {
             setError('Zarejestruj się jeszcze raz');
-        }
+        };
         setLoading(false);
     };
 
     return (
         <form onSubmit={handleSignUp} className='signup__form'>
-            <h3 className='signup__form--h3'>Zarejestruj się
-                <Decor />
+            <SectionTitle>Zarejestruj się</SectionTitle>
                 {error}
-            </h3> 
-            <input type='text' ref={nameRef} placeholder='Imię' required/>  
-            <input type='email' ref={emailRef} placeholder='Email' required/>
-            <input type='password' ref={passwordRef} placeholder='Hasło' required/>
-            <input type='password' ref={passwordConfirmRef}  placeholder='Powtórz hasło' required/>
+            <input type='text' ref={nameRef} placeholder='Imię' />  
+            <input type='email' ref={emailRef} placeholder='Email' />
+            <input type='password' ref={passwordRef} placeholder='Hasło' />
+            <input type='password' ref={passwordConfirmRef}  placeholder='Powtórz hasło' />
 
             <div className='form__btns'>
-                <button id='signup' type='submit' disabled={loading}>Załóż konto</button>
+                <Button id='signup' type='submit' disabled={loading}>Załóż konto</Button>
                 <Link id='login' to='/logged'>
-                    <button>Zaloguj się</button>
+                    <Button>Zaloguj się</Button>
                 </Link>
             </div>
         </form>
-    )
+    );
 };
 
 export default withRouter(SignUpForm);

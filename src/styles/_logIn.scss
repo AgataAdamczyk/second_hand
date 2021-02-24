@@ -1,70 +1,8 @@
 .login {
-    display: grid;
-    grid-template-rows: 200px 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 45px;
-    
-    .header__menu {
-        margin-right: 200px;
-        display: grid;
-        justify-self: end;
-        grid-template-rows: repeat(2, 60px);
-
-        &--log {
-            display: grid;
-            grid-template-columns: repeat(5, 200px);
-            list-style: none;
-            align-items: center;
-            justify-items: center;
-            
-            :first-child {
-                grid-column: 4/5;
-                justify-self: end;
-            }
-
-            :last-child {
-                grid-column: 5/-1;
-            }
-
-            li {
-                font-size: 14px;
-
-                .link {
-                    padding: 10px;
-                    text-decoration: none;
-                    color: $lighterMain;
-                    border: 1px solid transparent;
-
-                    &:hover {
-                        border: 1px solid $yellowFrame;
-                    }
-                }
-            }
-        }
-
-        &--menuList {
-            display: grid;
-            grid-template-columns: repeat(5, 200px);
-            list-style: none;
-            justify-items: center;
-
-            li {
-                padding: 15px;
-                font-size: 18px;
-                border: 1px solid transparent;
-                font-weight: 300;
-                color: $darkerMain;
-
-                &:hover {
-                    border: 1px solid $darkerMain;
-                }
-                
-                #menu-link {
-                    text-decoration: none;
-                    color: $darkerMain;           
-                }
-            }
-        }
-    }
 
     .login__form {
         display: grid;
@@ -83,9 +21,9 @@
             line-height: 100px;
             color: $darkerMain;
 
-            #decor {
-                margin-bottom: 20px;
-            }
+            // #decor {
+            //     margin-bottom: 20px;
+            // }
         }
 
         input[type=email],

@@ -19,7 +19,7 @@ const Foundations = () => {
                 
             </div>
         </> 
-    )
-}
+    );
+};
 
 export default Foundations;

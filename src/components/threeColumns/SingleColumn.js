@@ -12,8 +12,8 @@ const SingleColumn = ({
             <span className='threeColumns__singleCol--title'>{columnTitle}</span>
             <span className='threeColumns__singleCol--description'>{columnDescription}</span>
         </div>
-    )
-}
+    );
+};
 
 SingleColumn.propTypes = {
     columnNumber: PropTypes.number.isRequired,

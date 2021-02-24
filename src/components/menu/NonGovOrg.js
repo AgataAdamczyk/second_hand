@@ -19,7 +19,7 @@ const NonGovMenu = () => {
                
             </div>  
         </> 
-    )
-}
+    );
+};
 
 export default NonGovMenu;

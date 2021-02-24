@@ -1,116 +1,39 @@
 .header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 120px;
+    background: url('../images/header_start_img.jpg') left top no-repeat;
 
-    .header__img {
-        max-width: 100%;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        margin: 0 0 120px auto;
+
+        .section__title {
+            font-weight: 300;
+        }
     }
 
-    .header__nav {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-rows: 150px 300px 300px;
-        margin-top: 40px;
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 110px auto;
 
-        .header__menu {
-            margin-right: 120px;
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-
-            &--log {
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                list-style: none;
-                justify-items: center;
-                
-                :first-child {
-                    grid-column: 5/6;
-                }
-
-                :last-child {
-                    grid-column: 6/-1;
-                }
-
-                li {
-                    font-size: 14px;
-
-                    .link {
-                        padding: 10px;
-                        text-decoration: none;
-                        color: $lighterMain;
-                        border: 1px solid transparent;
-
-                        &:hover {
-                            border: 1px solid $yellowFrame;
-                        }
-                    }
-                }
-            }
-
-            &--menuList {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                list-style: none;
-                justify-items: center;
-
-                li {
-                    padding: 15px;
-                    font-size: 18px;
-                    border: 1px solid transparent;
-                    font-weight: 300;
-                    color: $darkerMain;
-
-                    &:hover {
-                        border: 1px solid $darkerMain;
-                    }
-                    
-                    #menu-link {
-                        text-decoration: none;
-                        color: $darkerMain;           
-                    }
-                }
-            }
-        }
-
-        .header__title {
-            display: grid;
-            padding: 0 40px;
-            align-self: flex-end;
-            justify-self: center;
-
-            h2 {
-                font-size: 40px;
-                font-weight: 300;
-                text-align: center;
-                color: $darkerMain;
-                margin-bottom: 30px;
-            }
-             
-            #decor {
-                margin-top: 20px;
-                text-align: center;
-            }
-        }
-
-        .header__btns {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 30px;
-            align-self: flex-end;
-            justify-self: center;
-
-            .link {
-                color: $darkerMain;
-                font-size: 36px;
-                text-decoration: none;
-                text-align: center;
-                text-transform: uppercase;
-                width: 300px;
-                border: 1px solid $darkerMain;
-                margin: 10px;
-                padding: 20px 30px;
-                font-weight: 300;
-            }
+        .link {
+            color: $darkerMain;
+            font-size: 36px;  
+            font-weight: 300;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            width: 200px;
+            border: 1px solid $darkerMain;
+            margin-left: 80px;
+            padding: 20px 50px;
         }
     }
 }
+    

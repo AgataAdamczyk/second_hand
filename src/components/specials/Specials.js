@@ -1,29 +1,26 @@
 import React from 'react';
 import SpecialsColumns from './ScpecialsColums';
-import SpecialsBtn from './SpecialsBtn';
-import Decor from '../../images/decoration-1.svg';
 import { specialsColumns } from '../../data/specialsColumns';
+import ButtonLink from '../buttons/ButtonLink';
+import SectionTitle from '../SectionTitle';
 
 const Specials = () => {
     return (
-        <section name='Specials' className='grid__container'>
+        <section name='Specials' className='container'>
             <div className='specials'>
-                <div className='specials__title'>
-                    <h2 className='specials__title--header'>Wystarczą 4 proste kroki</h2> 
-                    <img className='specials__title--decor' src={ Decor } alt='decor'/>                    
-                </div>
+                <SectionTitle>Wystarczą 4 proste kroki</SectionTitle>                    
                 <div className='specials__columns'>
                     {specialsColumns.map(item => (
-                        < SpecialsColumns key={item.image} {...item} />
+                        <SpecialsColumns key={item.image} {...item} />
                     ))}
                 </div>
 
                 <div className='specials__btn'>
-                    < SpecialsBtn text='Załóż konto' />
+                    <ButtonLink pathName='/login' text='Załóż konto' />
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Specials;

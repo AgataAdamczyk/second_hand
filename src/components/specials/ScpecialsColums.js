@@ -7,14 +7,14 @@ const SpecialsColumn = ({
     specialsItems,
 }) => {
     return (
-        <div className='specials__columns--singleCol'>
-            <img src={image} alt='icon'/>
-            <h2>{specialsText}</h2>
-            <span id='underline'></span>
-            <h3>{specialsItems}</h3>
+        <div className='specials__column'>
+            <img className='specials__column--img' src={image} alt='column icon'/>
+            <h2 className='specials__column--header'>{specialsText}</h2>
+            <span className='specials__column--underline'></span>
+            <h3 className='specials__column--info'>{specialsItems}</h3>
         </div>
-    )
-}
+    );
+};
 
 SpecialsColumn.propTypes = {
     image: PropTypes.object.isRequired,

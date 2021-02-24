@@ -1,20 +1,20 @@
 import React from 'react';
 import AuthBtns from '../header/AuthBtns';
 import HeaderMenu from '../header/HeaderMenu';
-import LogInForm from './LogInForm';
+import SignUpForm from './SignUpForm';
 
-const LogIn = () => {
+const SignUp = () => {
     return (
-        <section name='Login' className='container'>
+        <section name='Signup' className='container'>
             <nav className='navigation'>
                 <AuthBtns />
                 <HeaderMenu />
             </nav> 
-            <div className='login'>
-               <LogInForm />
+            <div className='signup'>
+                <SignUpForm />
             </div>
         </section>
     );
 };
 
-export default LogIn;
+export default SignUp;

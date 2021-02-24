@@ -8,7 +8,7 @@ const MenuNavigation = () => {
             <div className='menu__navigation--link'><Link to='/nongovorg'>Organizacjom pozarządowym</Link></div>
             <div className='menu__navigation--link'><Link to='/collections'>Lokalnym zbiórkom</Link></div>
         </div>
-    )
-}
+    );
+};
       
 export default MenuNavigation;

@@ -5,14 +5,17 @@ export const AuthContext = React.createContext();
 
 export const useAuth = () => {
     return useContext(AuthContext);
-}
+};
 
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
 
-    const signup = (email, password) => {
-        return auth.createUserWithEmailAndPassword(email, password);
+    const signup = async(name, email, password) => {
+        await auth.createUserWithEmailAndPassword(email, password)
+        return auth.currentUser.updateProfile({
+                displayName: name
+            });
     };
 
     const login = (email, password) => {
@@ -41,7 +44,7 @@ export const AuthProvider = ({ children }) => {
         signup,
         login,
         logout
-    }
+    };
 
     return(
         <AuthContext.Provider value={value}>

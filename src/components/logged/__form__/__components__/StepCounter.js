@@ -6,8 +6,8 @@ const StepCounter = ({ page }) => {
         <>
             <span id='step-counter'>Krok {page}/5</span>
         </>
-    )
-}
+    );
+};
 
 StepCounter.propTypes = {
     page: PropTypes.number.isRequired,

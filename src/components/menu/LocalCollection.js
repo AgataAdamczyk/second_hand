@@ -19,7 +19,7 @@ const LocalCollectionMenu = () => {
                
             </div>     
         </> 
-    )
-}
+    );
+};
 
 export default LocalCollectionMenu;

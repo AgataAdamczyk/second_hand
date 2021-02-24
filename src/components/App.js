@@ -3,11 +3,10 @@ import '../App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import LogIn from './logIn/LogIn';
-import SignUp from './signUp/SignUp';
+import SignUp from './singUp/singUp';
 import LoggedPage from './logged/LoggedPage';
 import { AuthProvider } from './AuthContext';
 import PrivateRoute from './PrivateRoute';
-
 
 const App = () => {
   return (
@@ -23,7 +22,7 @@ const App = () => {
         </div>
       </Router >
     </AuthProvider>
-  )
-}
+  );
+};
 
 export default App;

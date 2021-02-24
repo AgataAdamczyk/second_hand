@@ -8,7 +8,7 @@ class ThirdStep extends Component {
         // orgOptions: '',
         bgColor: 'transparent',
         // orgName: '',
-    }
+    };
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -18,7 +18,7 @@ class ThirdStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
     
     handleClickPrev = (e) => {
         if(typeof this.props.prevPage == 'function') {
@@ -29,7 +29,7 @@ class ThirdStep extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
 
     render() {
         let spanStyle = {
@@ -76,8 +76,8 @@ class ThirdStep extends Component {
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
                 </div> 
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default ThirdStep;

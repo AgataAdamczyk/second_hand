@@ -23,8 +23,8 @@ const Organizations = ({
                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 Organizations.propTypes = {
     name: PropTypes.string.isRequired,

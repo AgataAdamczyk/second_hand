@@ -7,7 +7,7 @@
 
   .threeColumns__singleCol {
     display: inline-grid;
-    grid-template-rows: 100px 50px 100px;
+    grid-template-rows: 100px 50px auto;
     grid-row-gap: 20px;
     text-align: center;
     color: $darkerMain;

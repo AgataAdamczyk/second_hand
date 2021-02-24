@@ -7,8 +7,8 @@ const LoggedNotification = ({ text }) => {
             <h2>Ważne!</h2>
             <h3>{text}</h3>
         </div>
-    )
-}
+    );
+};
 
 LoggedNotification.propTypes = {
     text: PropTypes.string.isRequired,

@@ -6,7 +6,7 @@ import Hand from '../../../images/hand.png';
 class FormSummary extends Component {
     state = {
         placeholder: this.props.values
-    }
+    };
 
     handleClickNext = (e) => {
         if(typeof this.props.nextPage == 'function') {
@@ -16,7 +16,7 @@ class FormSummary extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
     
     handleClickPrev = (e) => {
         if(typeof this.props.prevPage == 'function') {
@@ -27,7 +27,7 @@ class FormSummary extends Component {
         }
         e.preventDefault();
         // this.props.nextPage(this.state)
-    }
+    };
 
     render() {
         return (
@@ -53,8 +53,8 @@ class FormSummary extends Component {
                     <input id='btnNextPrev' onClick={this.handleClickNext} type='submit' value='Dalej'/>
                 </div>
             </div> 
-        )
-    }
-}
+        );
+    };
+};
 
 export default FormSummary;

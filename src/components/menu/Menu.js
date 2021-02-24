@@ -5,18 +5,15 @@ import MenuNavigation from './MenuNavigation';
 import Foundations from './Foundations';
 import NonGovOrg from './NonGovOrg';
 import LocalCollection from './LocalCollection';
-
-import Decor from '../header/Decor';
+import SectionTitle from '../SectionTitle';
 
 const Menu = () => {
     return (
         <BrowserRouter>
-            <section name='Menu' className='grid__container'>
+            <section name='Menu' className='container'>
                 <div className='menu'>
-                    <h2>Komu pomagamy?
-                        < Decor />
-                    </h2>
-                < MenuNavigation />
+                    <SectionTitle>Komu pomagamy?</SectionTitle>
+                <MenuNavigation />
                     <Switch >
                         <Route path='/foundations' component={ Foundations }/>
                         <Route path='/nongovorg' component={ NonGovOrg }/>
@@ -30,7 +27,7 @@ const Menu = () => {
                 </div>
             </section>
         </BrowserRouter>
-    )
-}
+    );
+};
 
 export default Menu;
